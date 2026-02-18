@@ -1,12 +1,12 @@
 <script lang="ts" module>
-	import type { HTMLButtonAttributes } from 'svelte/elements';
+import type { HTMLButtonAttributes } from "svelte/elements";
 
-	import { Button } from 'bits-ui';
-	import { cn } from 'tailwind-variants';
+import { Button } from "bits-ui";
+import { cn } from "tailwind-variants";
 
-	import { buttonVariants, type ButtonVariantType } from './button.variants';
+import { buttonVariants, type ButtonVariantType } from "./button.variants";
 
-	export interface ButtonProps extends ButtonVariantType, HTMLButtonAttributes {}
+export interface ButtonProps extends ButtonVariantType, HTMLButtonAttributes {}
 </script>
 
 <script lang="ts">

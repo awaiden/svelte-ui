@@ -1,7 +1,7 @@
 <script lang="ts" module>
-	import { Select, type SelectPortalProps } from 'bits-ui';
+import { Select, type SelectPortalProps } from "bits-ui";
 
-	export type SelectProps = SelectPortalProps;
+export type SelectProps = SelectPortalProps;
 </script>
 
 <script lang="ts">

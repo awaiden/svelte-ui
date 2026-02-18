@@ -11,27 +11,29 @@ import SelectRoot from "./select.svelte";
 export { selectVariants, type SelectVariantType } from "./select.variants";
 
 export const Select = {
-  Content: SelectContent,
-  Group: SelectGroup,
-  GroupHeading: SelectGroupHeading,
-  Item: SelectItem,
-  Portal: SelectPortal,
-  Root: SelectRoot,
-  Trigger: SelectTrigger,
+	Content: SelectContent,
+	Group: SelectGroup,
+	GroupHeading: SelectGroupHeading,
+	Item: SelectItem,
+	Portal: SelectPortal,
+	Root: SelectRoot,
+	Trigger: SelectTrigger,
 };
 
 export {
-  SelectContent,
-  SelectGroup,
-  SelectGroupHeading,
-  SelectItem,
-  SelectPortal,
-  SelectRoot,
-  SelectTrigger,
+	SelectContent,
+	SelectGroup,
+	SelectGroupHeading,
+	SelectItem,
+	SelectPortal,
+	SelectRoot,
+	SelectTrigger,
 };
 
 export type SelectContentProps = ComponentProps<typeof Select.Content>;
-export type SelectGroupHeadingProps = ComponentProps<typeof Select.GroupHeading>;
+export type SelectGroupHeadingProps = ComponentProps<
+	typeof Select.GroupHeading
+>;
 export type SelectGroupProps = ComponentProps<typeof Select.Group>;
 export type SelectItemProps = ComponentProps<typeof Select.Item>;
 export type SelectProps = ComponentProps<typeof Select.Root>;

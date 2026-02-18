@@ -1,15 +1,15 @@
 <script lang="ts" module>
-	import { defineMeta } from '@storybook/addon-svelte-csf';
+import { defineMeta } from "@storybook/addon-svelte-csf";
 
-	import { Select } from '.';
+import { Select } from ".";
 
-	const { Story } = defineMeta({
-		title: 'Select',
-		tags: ['autodocs'],
-		parameters: {
-			layout: 'centered'
-		}
-	});
+const { Story } = defineMeta({
+	title: "Select",
+	tags: ["autodocs"],
+	parameters: {
+		layout: "centered",
+	},
+});
 </script>
 
 <script lang="ts">

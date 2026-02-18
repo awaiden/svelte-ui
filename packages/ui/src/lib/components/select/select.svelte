@@ -1,9 +1,9 @@
 <script lang="ts" module>
-	import { Select, type SelectRootProps } from 'bits-ui';
+import { Select, type SelectRootProps } from "bits-ui";
 
-	import { type SelectVariantType } from './select.variants';
+import type { SelectVariantType } from "./select.variants";
 
-	export type SelectProps = SelectRootProps & SelectVariantType;
+export type SelectProps = SelectRootProps & SelectVariantType;
 </script>
 
 <script lang="ts">

@@ -1,8 +1,8 @@
 .input,
 .textarea,
 .select__trigger {
-	@apply bg-input text-input-foreground hover:bg-input-hover rounded border text-sm shadow;
-	@apply w-full px-4 py-2;
+	@apply bg-input text-input-foreground hover:bg-input-hover rounded-input border text-sm shadow;
+	@apply h-10 w-full px-4;
 
 	&:disabled {
 		@apply status-disabled;

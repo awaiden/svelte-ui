@@ -1,110 +1,114 @@
 :root {
-  color-scheme: light;
+	color-scheme: light;
 
-  --navbar-height: 4rem;
-  --radius: 0.625rem;
+	--navbar-height: 4rem;
+	--radius: 0.625rem;
+	--radius-button: calc(infinity * 1px);
+	--radius-input: 0.375rem;
 
-  --white: oklch(0.985 0 0);
-  --black: oklch(0.145 0 0);
+	--white: oklch(0.985 0 0);
+	--black: oklch(0.145 0 0);
 
-  --background: var(--white);
-  --foreground: var(--black);
+	--background: var(--white);
+	--foreground: var(--black);
 
-  --surface: oklch(1 0 0);
-  --surface-foreground: oklch(0.145 0 0);
-  --overlay: oklch(1 0 0 / 90%);
-  --overlay-foreground: oklch(0.145 0 0);
-  --input: oklch(0.922 0 0);
-  --input-foreground: oklch(0.205 0 0);
-  --input-hover: oklch(0.922 0 0 / 85%);
+	--surface: oklch(1 0 0);
+	--surface-foreground: oklch(0.145 0 0);
+	--overlay: oklch(1 0 0 / 90%);
+	--overlay-foreground: oklch(0.145 0 0);
+	--input: oklch(0.922 0 0);
+	--input-foreground: oklch(0.205 0 0);
+	--input-hover: oklch(0.922 0 0 / 85%);
 
-  --primary: var(--black);
-  --primary-foreground: var(--white);
-  --primary-hover: oklch(0.145 0 0 / 85%);
-  --secondary: oklch(0.91 0.0013 286.37);
-  --secondary-foreground: oklch(0.205 0 0);
-  --secondary-hover: oklch(0.91 0.0013 286.37 / 85%);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --muted-hover: oklch(0.97 0 0 / 85%);
-  --destructive: oklch(0.69 0.25 25);
-  --destructive-foreground: oklch(0.985 0 0);
-  --destructive-hover: oklch(0.69 0.25 25 / 85%);
-  --success: oklch(0.623 0.17 145);
-  --success-foreground: oklch(0.985 0 0);
-  --success-hover: oklch(0.623 0.17 145 / 85%);
+	--primary: var(--black);
+	--primary-foreground: var(--white);
+	--primary-hover: oklch(0.145 0 0 / 85%);
+	--secondary: oklch(0.91 0.0013 286.37);
+	--secondary-foreground: oklch(0.205 0 0);
+	--secondary-hover: oklch(0.91 0.0013 286.37 / 85%);
+	--muted: oklch(0.97 0 0);
+	--muted-foreground: oklch(0.556 0 0);
+	--muted-hover: oklch(0.97 0 0 / 85%);
+	--destructive: oklch(0.69 0.25 25);
+	--destructive-foreground: oklch(0.985 0 0);
+	--destructive-hover: oklch(0.69 0.25 25 / 85%);
+	--success: oklch(0.623 0.17 145);
+	--success-foreground: oklch(0.985 0 0);
+	--success-hover: oklch(0.623 0.17 145 / 85%);
 
-  --border: oklch(0.922 0 0);
-  --ring: oklch(62% 0.18 250);
+	--border: oklch(0.922 0 0);
+	--ring: oklch(62% 0.18 250);
 }
 
 .dark {
-  color-scheme: dark;
+	color-scheme: dark;
 
-  --background: var(--black);
-  --foreground: var(--white);
+	--background: var(--black);
+	--foreground: var(--white);
 
-  --surface: oklch(0.205 0 0);
-  --surface-foreground: oklch(0.985 0 0);
-  --overlay: oklch(0.205 0 0);
-  --overlay-foreground: oklch(0.985 0 0);
-  --input: oklch(1 0 0 / 15%);
-  --input-foreground: oklch(0.985 0 0);
-  --input-hover: oklch(1 0 0 / 25%);
+	--surface: oklch(0.205 0 0);
+	--surface-foreground: oklch(0.985 0 0);
+	--overlay: oklch(0.205 0 0);
+	--overlay-foreground: oklch(0.985 0 0);
+	--input: oklch(1 0 0 / 15%);
+	--input-foreground: oklch(0.985 0 0);
+	--input-hover: oklch(1 0 0 / 25%);
 
-  --primary: var(--white);
-  --primary-foreground: var(--black);
-  --primary-hover: oklch(0.985 0 0 / 85%);
-  --secondary: oklch(0.3023 0.0053 286.08);
-  --secondary-foreground: oklch(0.985 0 0);
-  --secondary-hover: oklch(0.3023 0.0053 286.08 / 85%);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --muted-hover: oklch(0.269 0 0 / 85%);
-  --destructive: oklch(0.45 0.2 25);
-  --destructive-foreground: oklch(0.985 0 0);
-  --destructive-hover: oklch(0.45 0.2 25 / 85%);
-  --success: oklch(0.7017 0.3225 145);
-  --success-foreground: oklch(0.205 0 0);
-  --success-hover: oklch(0.7017 0.3225 145 / 85%);
+	--primary: var(--white);
+	--primary-foreground: var(--black);
+	--primary-hover: oklch(0.985 0 0 / 85%);
+	--secondary: oklch(0.3023 0.0053 286.08);
+	--secondary-foreground: oklch(0.985 0 0);
+	--secondary-hover: oklch(0.3023 0.0053 286.08 / 85%);
+	--muted: oklch(0.269 0 0);
+	--muted-foreground: oklch(0.708 0 0);
+	--muted-hover: oklch(0.269 0 0 / 85%);
+	--destructive: oklch(0.45 0.2 25);
+	--destructive-foreground: oklch(0.985 0 0);
+	--destructive-hover: oklch(0.45 0.2 25 / 85%);
+	--success: oklch(0.7017 0.3225 145);
+	--success-foreground: oklch(0.205 0 0);
+	--success-hover: oklch(0.7017 0.3225 145 / 85%);
 
-  --border: oklch(1 0 0 / 10%);
-  --ring: oklch(62% 0.18 250);
+	--border: oklch(1 0 0 / 10%);
+	--ring: oklch(62% 0.18 250);
 }
 
 @theme inline {
-  --radius: var(--radius);
+	--radius: var(--radius);
+	--radius-button: var(--radius-button);
+	--radius-input: var(--radius-input);
 
-  --color-white: var(--white);
-  --color-black: var(--black);
+	--color-white: var(--white);
+	--color-black: var(--black);
 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
 
-  --color-surface: var(--surface);
-  --color-surface-foreground: var(--surface-foreground);
-  --color-overlay: var(--overlay);
-  --color-overlay-foreground: var(--overlay-foreground);
-  --color-input: var(--input);
-  --color-input-foreground: var(--input-foreground);
-  --color-input-hover: var(--input-hover);
+	--color-surface: var(--surface);
+	--color-surface-foreground: var(--surface-foreground);
+	--color-overlay: var(--overlay);
+	--color-overlay-foreground: var(--overlay-foreground);
+	--color-input: var(--input);
+	--color-input-foreground: var(--input-foreground);
+	--color-input-hover: var(--input-hover);
 
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary-hover: var(--primary-hover);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary-hover: var(--secondary-hover);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted-hover: var(--muted-hover);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-destructive-hover: var(--destructive-hover);
-  --color-success: var(--success);
-  --color-success-foreground: var(--success-foreground);
-  --color-success-hover: var(--success-hover);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-primary-hover: var(--primary-hover);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-secondary-hover: var(--secondary-hover);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-muted-hover: var(--muted-hover);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-destructive-hover: var(--destructive-hover);
+	--color-success: var(--success);
+	--color-success-foreground: var(--success-foreground);
+	--color-success-hover: var(--success-hover);
 
-  --color-border: var(--border);
-  --color-ring: var(--ring);
+	--color-border: var(--border);
+	--color-ring: var(--ring);
 }

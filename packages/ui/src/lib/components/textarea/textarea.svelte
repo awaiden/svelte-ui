@@ -1,11 +1,16 @@
 <script lang="ts" module>
-	import type { HTMLTextareaAttributes } from 'svelte/elements';
+import type { HTMLTextareaAttributes } from "svelte/elements";
 
-	import { cn } from 'tailwind-variants';
+import { cn } from "tailwind-variants";
 
-	import { textareaVariants, type TextareaVariantType } from './textarea.variants';
+import {
+	textareaVariants,
+	type TextareaVariantType,
+} from "./textarea.variants";
 
-	export interface TextareaProps extends HTMLTextareaAttributes, TextareaVariantType {}
+export interface TextareaProps
+	extends HTMLTextareaAttributes,
+		TextareaVariantType {}
 </script>
 
 <script lang="ts">

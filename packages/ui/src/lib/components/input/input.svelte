@@ -1,11 +1,11 @@
 <script lang="ts" module>
-	import type { HTMLInputAttributes } from 'svelte/elements';
+import type { HTMLInputAttributes } from "svelte/elements";
 
-	import { cn } from 'tailwind-variants';
+import { cn } from "tailwind-variants";
 
-	import { inputVariants, type InputVariantType } from './input.variants';
+import { inputVariants, type InputVariantType } from "./input.variants";
 
-	export interface InputProps extends HTMLInputAttributes, InputVariantType {}
+export interface InputProps extends HTMLInputAttributes, InputVariantType {}
 </script>
 
 <script lang="ts">

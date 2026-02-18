@@ -1,11 +1,13 @@
 <script lang="ts" module>
-	import type { HTMLAttributes } from 'svelte/elements';
+import type { HTMLAttributes } from "svelte/elements";
 
-	import { cn } from 'tailwind-variants';
+import { cn } from "tailwind-variants";
 
-	import { linkVariants, type LinkVariantType } from './link.variants';
+import { linkVariants, type LinkVariantType } from "./link.variants";
 
-	export interface LinkProps extends HTMLAttributes<HTMLAnchorElement>, LinkVariantType {}
+export interface LinkProps
+	extends HTMLAttributes<HTMLAnchorElement>,
+		LinkVariantType {}
 </script>
 
 <script lang="ts">

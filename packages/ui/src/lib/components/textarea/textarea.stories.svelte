@@ -1,16 +1,16 @@
 <script lang="ts" module>
-	import { defineMeta } from '@storybook/addon-svelte-csf';
+import { defineMeta } from "@storybook/addon-svelte-csf";
 
-	import Textarea from './textarea.svelte';
+import Textarea from "./textarea.svelte";
 
-	const { Story } = defineMeta({
-		component: Textarea,
-		title: 'Textarea',
-		tags: ['autodocs'],
-		parameters: {
-			layout: 'centered'
-		}
-	});
+const { Story } = defineMeta({
+	component: Textarea,
+	title: "Textarea",
+	tags: ["autodocs"],
+	parameters: {
+		layout: "centered",
+	},
+});
 </script>
 
 <Story name="Default">

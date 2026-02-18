@@ -1,11 +1,11 @@
 <script lang="ts" module>
-	import { cn } from 'tailwind-variants';
-	import { Select, type SelectTriggerProps } from 'bits-ui';
+import { cn } from "tailwind-variants";
+import { Select, type SelectTriggerProps } from "bits-ui";
 
-	import { selectVariants } from './select.variants';
-	import { LucideChevronDown } from 'lucide-svelte';
+import { selectVariants } from "./select.variants";
+import { LucideChevronDown } from "lucide-svelte";
 
-	export type SelectProps = SelectTriggerProps;
+export type SelectProps = SelectTriggerProps;
 </script>
 
 <script lang="ts">

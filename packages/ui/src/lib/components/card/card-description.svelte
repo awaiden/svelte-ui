@@ -1,11 +1,13 @@
 <script lang="ts" module>
-	import type { HTMLAttributes } from 'svelte/elements';
+import type { HTMLAttributes } from "svelte/elements";
 
-	import { cn } from 'tailwind-variants';
+import { cn } from "tailwind-variants";
 
-	import { cardVariants, type CardVariantType } from './card.variants';
+import { cardVariants, type CardVariantType } from "./card.variants";
 
-	export interface CardProps extends CardVariantType, HTMLAttributes<HTMLParagraphElement> {}
+export interface CardProps
+	extends CardVariantType,
+		HTMLAttributes<HTMLParagraphElement> {}
 </script>
 
 <script lang="ts">

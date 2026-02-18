@@ -1,11 +1,11 @@
 <script lang="ts" module>
-	import type { HTMLLabelAttributes } from 'svelte/elements';
+import type { HTMLLabelAttributes } from "svelte/elements";
 
-	import { cn } from 'tailwind-variants';
+import { cn } from "tailwind-variants";
 
-	import { labelVariants, type LabelVariantType } from './label.variants';
+import { labelVariants, type LabelVariantType } from "./label.variants";
 
-	export interface LabelProps extends HTMLLabelAttributes, LabelVariantType {}
+export interface LabelProps extends HTMLLabelAttributes, LabelVariantType {}
 </script>
 
 <script lang="ts">

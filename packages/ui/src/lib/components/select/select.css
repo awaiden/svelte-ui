@@ -10,27 +10,27 @@
 	@apply rounded border bg-surface text-sm text-surface-foreground shadow;
 	@apply transition-opacity duration-200;
 
-	&[data-state='open'] & {
+	&[data-state="open"] & {
 		@apply animate-in fade-in-80 zoom-in-95;
 	}
 
-	&[data-state='closed'] & {
+	&[data-state="closed"] & {
 		@apply animate-out fade-out-80 zoom-out-95;
 	}
 
-	&[data-side='top'] & {
+	&[data-side="top"] & {
 		@apply -translate-y-1;
 	}
 
-	&[data-side='bottom'] & {
+	&[data-side="bottom"] & {
 		@apply translate-y-1;
 	}
 
-	&[data-side='left'] & {
+	&[data-side="left"] & {
 		@apply -translate-x-1;
 	}
 
-	&[data-side='right'] & {
+	&[data-side="right"] & {
 		@apply translate-x-1;
 	}
 }
@@ -42,7 +42,7 @@
 		@apply pointer-events-none opacity-50;
 	}
 
-	&[data-state='checked'] & {
+	&[data-state="checked"] & {
 		@apply bg-primary text-primary-foreground;
 	}
 

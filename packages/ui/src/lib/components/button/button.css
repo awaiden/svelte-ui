@@ -1,5 +1,5 @@
 .button {
-	@apply inline-flex w-fit items-center justify-center gap-2 rounded-full font-medium;
+	@apply rounded-button inline-flex w-fit items-center justify-center gap-2 font-medium;
 	@apply transition-[background-color,scale];
 
 	&:active:not(:disabled) {

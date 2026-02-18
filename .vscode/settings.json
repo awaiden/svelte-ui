@@ -1,14 +1,9 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.defaultFormatter": "biomejs.biome",
 	"files.associations": {
 		"*.css": "tailwindcss"
 	},
-	"eslint.validate": [
-		"svelte",
-		"typescript",
-		"javascript"
-	],
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"[tailwindcss]": {
+		"editor.defaultFormatter": "biomejs.biome"
 	}
 }

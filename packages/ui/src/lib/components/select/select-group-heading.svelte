@@ -1,10 +1,10 @@
 <script lang="ts" module>
-	import { cn } from '$lib/utils';
-	import { Select, type SelectGroupHeadingProps } from 'bits-ui';
+import { cn } from "$lib/utils";
+import { Select, type SelectGroupHeadingProps } from "bits-ui";
 
-	import { selectVariants } from './select.variants';
+import { selectVariants } from "./select.variants";
 
-	export type SelectProps = SelectGroupHeadingProps;
+export type SelectProps = SelectGroupHeadingProps;
 </script>
 
 <script lang="ts">

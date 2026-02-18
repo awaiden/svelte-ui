@@ -1,11 +1,13 @@
 <script lang="ts" module>
-	import type { HTMLAttributes } from 'svelte/elements';
+import type { HTMLAttributes } from "svelte/elements";
 
-	import { cn } from 'tailwind-variants';
+import { cn } from "tailwind-variants";
 
-	import { surfaceVariants, type SurfaceVariantType } from './surface.variants';
+import { surfaceVariants, type SurfaceVariantType } from "./surface.variants";
 
-	export interface SurfaceProps extends HTMLAttributes<HTMLDivElement>, SurfaceVariantType {}
+export interface SurfaceProps
+	extends HTMLAttributes<HTMLDivElement>,
+		SurfaceVariantType {}
 </script>
 
 <script lang="ts">
