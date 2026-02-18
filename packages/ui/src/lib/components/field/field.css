@@ -1,0 +1,44 @@
+.field {
+	@apply flex flex-col gap-1;
+}
+
+.field__label {
+	@apply font-medium;
+}
+
+.field__description {
+	@apply text-sm text-muted-foreground;
+}
+
+.field__error {
+	@apply text-sm text-destructive;
+}
+
+.field__group {
+	@apply relative;
+
+	&:has(.field__prefix) input {
+		@apply pl-10;
+	}
+
+	&:has(.field__suffix) input {
+		@apply pr-10;
+	}
+
+	& .field__prefix {
+		@apply absolute top-1/2 left-3 -translate-y-1/2;
+	}
+
+	& .field__suffix {
+		@apply absolute top-1/2 right-3 -translate-y-1/2;
+	}
+
+	& svg {
+		@apply size-5;
+	}
+}
+
+.field__prefix,
+.field__suffix {
+	@apply flex items-center;
+}

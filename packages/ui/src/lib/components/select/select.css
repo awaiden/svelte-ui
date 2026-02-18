@@ -1,0 +1,52 @@
+.select__trigger {
+	@apply inline-flex items-center justify-between gap-2;
+}
+
+.select__content {
+	max-height: var(--bits-select-content-available-height);
+	width: var(--bits-select-anchor-width);
+	min-width: var(--bits-select-anchor-width);
+
+	@apply rounded border bg-surface text-sm text-surface-foreground shadow;
+	@apply transition-opacity duration-200;
+
+	&[data-state='open'] & {
+		@apply animate-in fade-in-80 zoom-in-95;
+	}
+
+	&[data-state='closed'] & {
+		@apply animate-out fade-out-80 zoom-out-95;
+	}
+
+	&[data-side='top'] & {
+		@apply -translate-y-1;
+	}
+
+	&[data-side='bottom'] & {
+		@apply translate-y-1;
+	}
+
+	&[data-side='left'] & {
+		@apply -translate-x-1;
+	}
+
+	&[data-side='right'] & {
+		@apply translate-x-1;
+	}
+}
+
+.select__item {
+	@apply flex cursor-pointer items-center rounded px-2 py-1.5 select-none;
+
+	&[data-disabled] & {
+		@apply pointer-events-none opacity-50;
+	}
+
+	&[data-state='checked'] & {
+		@apply bg-primary text-primary-foreground;
+	}
+
+	&[data-highlighted] & {
+		@apply bg-primary/50;
+	}
+}

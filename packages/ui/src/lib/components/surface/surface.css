@@ -1,0 +1,4 @@
+.surface {
+	@apply rounded border bg-surface p-6 text-surface-foreground shadow;
+	@apply w-full max-w-md;
+}

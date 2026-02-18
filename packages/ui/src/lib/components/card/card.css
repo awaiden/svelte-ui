@@ -1,0 +1,21 @@
+.card {
+	@apply bg-surface text-surface-foreground rounded shadow;
+	@apply w-full max-w-md;
+	@apply flex flex-col gap-4 p-6;
+}
+
+.card__header {
+	@apply flex flex-col gap-1;
+}
+
+.card__title {
+	@apply text-xl font-bold;
+}
+
+.card__description {
+	@apply text-muted-foreground text-base;
+}
+
+.card__content {
+	@apply flex flex-1 flex-col gap-3;
+}

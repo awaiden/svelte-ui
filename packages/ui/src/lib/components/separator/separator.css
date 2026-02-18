@@ -1,0 +1,11 @@
+.separator {
+	@apply my-4 shrink-0 bg-border;
+
+	&[data-orientation='horizontal'] {
+		@apply h-px w-full;
+	}
+
+	&[data-orientation='vertical'] {
+		@apply h-full w-px;
+	}
+}
