@@ -1,0 +1,31 @@
+.avatar {
+	@apply relative flex shrink-0 overflow-hidden rounded-full;
+}
+
+.avatar--xs {
+	@apply size-6 text-xs;
+}
+
+.avatar--sm {
+	@apply size-8 text-sm;
+}
+
+.avatar--md {
+	@apply size-10 text-base;
+}
+
+.avatar--lg {
+	@apply size-12 text-lg;
+}
+
+.avatar--xl {
+	@apply size-16 text-xl;
+}
+
+.avatar__image {
+	@apply aspect-square size-full object-cover;
+}
+
+.avatar__fallback {
+	@apply bg-muted text-muted-foreground flex size-full items-center justify-center rounded-full font-medium uppercase;
+}

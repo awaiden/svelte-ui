@@ -1,0 +1,47 @@
+.accordion {
+	@apply w-full max-w-md;
+}
+
+.accordion__item {
+	@apply border-b;
+}
+
+.accordion__header {
+	@apply flex;
+}
+
+.accordion__trigger {
+	@apply flex w-full flex-1 cursor-pointer items-center justify-between py-4 text-left text-sm font-medium transition-all select-none;
+
+	&:hover {
+		@apply underline;
+	}
+
+	&:disabled {
+		@apply cursor-not-allowed opacity-50;
+	}
+
+	&:focus-visible {
+		@apply status-focused;
+	}
+
+	&[data-state='open'] > .accordion__trigger-icon {
+		@apply rotate-180;
+	}
+}
+
+.accordion__trigger-icon {
+	@apply size-4 shrink-0 transition-transform duration-200;
+}
+
+.accordion__content {
+	@apply overflow-hidden text-sm;
+
+	&[data-state='open'] {
+		@apply animate-accordion-down;
+	}
+
+	&[data-state='closed'] {
+		@apply animate-accordion-up;
+	}
+}

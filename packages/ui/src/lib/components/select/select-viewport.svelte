@@ -2,14 +2,14 @@
 import { cn } from "$lib/utils";
 import { Select, type SelectViewportProps } from "bits-ui";
 
-import { selectVariants } from "./select.variants";
+import { getSelectContext } from "./select-context";
 
 export type SelectProps = SelectViewportProps;
 </script>
 
 <script lang="ts">
 	let { children, class: className, ...rest }: SelectProps = $props();
-	const slots = $derived(selectVariants());
+	const { slots } = getSelectContext();
 </script>
 
 <Select.Viewport {...rest} class={cn(slots.viewport(), className)}>

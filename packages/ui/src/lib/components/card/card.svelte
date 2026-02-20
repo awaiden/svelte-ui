@@ -3,6 +3,7 @@ import type { HTMLAttributes } from "svelte/elements";
 
 import { cn } from "tailwind-variants";
 
+import { setCardContext } from "./card-context";
 import { cardVariants, type CardVariantType } from "./card.variants";
 
 export interface CardProps
@@ -14,6 +15,12 @@ export interface CardProps
 	let { children, class: className, ...rest }: CardProps = $props();
 
 	let slots = $derived(cardVariants());
+
+	setCardContext({
+		get slots() {
+			return slots;
+		}
+	});
 </script>
 
 <div class={cn(slots.root(), className)} {...rest}>

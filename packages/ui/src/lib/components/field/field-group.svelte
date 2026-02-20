@@ -3,7 +3,8 @@ import type { HTMLAttributes } from "svelte/elements";
 
 import { cn } from "tailwind-variants";
 
-import { fieldVariants, type FieldVariantType } from "./field.variants";
+import { getFieldContext } from "./field-context";
+import type { FieldVariantType } from "./field.variants";
 
 export interface FieldProps
 	extends FieldVariantType,
@@ -13,7 +14,7 @@ export interface FieldProps
 <script lang="ts">
 	let { children, class: className, ...rest }: FieldProps = $props();
 
-	let slots = $derived(fieldVariants());
+	const { slots } = getFieldContext();
 </script>
 
 <div class={cn(slots.group(), className)} {...rest}>

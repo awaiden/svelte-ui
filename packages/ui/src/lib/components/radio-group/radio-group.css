@@ -1,0 +1,27 @@
+.radio-group {
+	@apply grid gap-2;
+}
+
+.radio-group__item {
+	@apply border-border aspect-square size-4 shrink-0 rounded-full border transition-colors;
+
+	&:focus-visible {
+		@apply status-focused;
+	}
+
+	&:disabled {
+		@apply status-disabled;
+	}
+
+	&[data-state='checked'] {
+		@apply border-primary text-primary;
+	}
+}
+
+.radio-group__indicator {
+	@apply flex items-center justify-center;
+}
+
+.radio-group__indicator-icon {
+	@apply size-2.5 fill-current text-current;
+}

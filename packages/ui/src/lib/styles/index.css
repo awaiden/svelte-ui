@@ -1,14 +1,15 @@
-@import "tailwindcss";
-@import "./components.css" layer(components);
-@import "./themes/default.css" layer(theme);
+@import 'tailwindcss';
+@import './components.css' layer(components);
+@import './themes/default.css' layer(theme);
+@import './animations.css';
 
-@plugin "tailwindcss-animate";
+@plugin 'tailwindcss-animate';
 
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
 	button:not(:disabled),
-	[role="button"]:not(:disabled) {
+	[role='button']:not(:disabled) {
 		@apply cursor-pointer;
 	}
 
@@ -17,12 +18,12 @@
 	}
 
 	body {
-		@apply relative bg-background text-foreground;
+		@apply bg-background text-foreground relative;
 	}
 }
 
 @utility status-focused {
-	@apply focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background focus:outline-none;
+	@apply focus:ring-ring focus:ring-offset-background focus:ring-2 focus:ring-offset-2 focus:outline-none;
 }
 
 @utility status-disabled {

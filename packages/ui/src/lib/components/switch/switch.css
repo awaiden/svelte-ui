@@ -1,0 +1,31 @@
+.switch {
+	@apply border-border bg-input inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors;
+
+	&:focus-visible {
+		@apply status-focused;
+	}
+
+	&:disabled {
+		@apply status-disabled;
+	}
+
+	&[data-state='checked'] {
+		@apply bg-primary;
+	}
+
+	&[data-state='unchecked'] {
+		@apply bg-input;
+	}
+}
+
+.switch__thumb {
+	@apply bg-background pointer-events-none block size-5 rounded-full shadow-lg ring-0 transition-transform;
+
+	&[data-state='checked'] {
+		@apply translate-x-5;
+	}
+
+	&[data-state='unchecked'] {
+		@apply translate-x-0;
+	}
+}

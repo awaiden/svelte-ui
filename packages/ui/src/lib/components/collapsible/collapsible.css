@@ -1,0 +1,35 @@
+.collapsible {
+	@apply w-full;
+}
+
+.collapsible__trigger {
+	@apply flex w-full items-center justify-between;
+
+	&:disabled {
+		@apply status-disabled;
+	}
+
+	&:focus-visible {
+		@apply status-focused;
+	}
+
+	&[data-state='open'] > .collapsible__trigger-icon {
+		@apply rotate-180;
+	}
+}
+
+.collapsible__trigger-icon {
+	@apply size-4 shrink-0 transition-transform duration-200;
+}
+
+.collapsible__content {
+	@apply overflow-hidden;
+
+	&[data-state='open'] {
+		@apply animate-collapsible-down;
+	}
+
+	&[data-state='closed'] {
+		@apply animate-collapsible-up;
+	}
+}
