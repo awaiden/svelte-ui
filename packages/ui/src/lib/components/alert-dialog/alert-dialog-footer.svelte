@@ -5,8 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getAlertDialogContext } from "./alert-dialog-context";
 
-export interface AlertDialogFooterProps
-	extends HTMLAttributes<HTMLDivElement> {}
+export type AlertDialogFooterProps = HTMLAttributes<HTMLDivElement>;
 </script>
 
 <script lang="ts">

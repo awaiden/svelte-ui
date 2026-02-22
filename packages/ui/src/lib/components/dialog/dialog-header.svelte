@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getDialogContext } from "./dialog-context";
 
-export interface DialogHeaderProps extends HTMLAttributes<HTMLDivElement> {}
+export type DialogHeaderProps = HTMLAttributes<HTMLDivElement>;
 </script>
 
 <script lang="ts">

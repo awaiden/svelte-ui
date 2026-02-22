@@ -12,7 +12,7 @@ export type RadioGroupItemProps = RadioGroup.ItemProps;
 	import { RadioGroup as RadioGroupPrimitive } from 'bits-ui';
 	import { LucideCircle } from 'lucide-svelte';
 
-	let { class: className, children, ...rest }: RadioGroupItemProps = $props();
+	let { class: className, ...rest }: RadioGroupItemProps = $props();
 
 	const { slots } = getRadioGroupContext();
 </script>

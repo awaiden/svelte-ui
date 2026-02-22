@@ -3,20 +3,19 @@ import type { HTMLAttributes } from "svelte/elements";
 
 import { cn } from "tailwind-variants";
 
-import { getFieldContext } from "./field-context";
 import type { FieldVariantType } from "./field.variants";
 
-export interface FieldProps
-	extends FieldVariantType,
-		HTMLAttributes<HTMLLabelElement> {}
+import { getFieldContext } from "./field-context";
+
+export type FieldProps = FieldVariantType & HTMLAttributes<HTMLLabelElement>;
 </script>
 
 <script lang="ts">
 	let { children, class: className, ...rest }: FieldProps = $props();
 
-	const { slots } = getFieldContext();
+	const { id, slots } = getFieldContext();
 </script>
 
-<label class={cn(slots.label(), className)} {...rest}>
+<label for={id} class={cn(slots.label(), className)} {...rest}>
 	{@render children?.()}
 </label>

@@ -1,4 +1,5 @@
 import { createContext } from "svelte";
+
 import type { selectVariants } from "./select.variants";
 
 interface SelectContext {

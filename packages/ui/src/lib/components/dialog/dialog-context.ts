@@ -1,4 +1,5 @@
 import { createContext } from "svelte";
+
 import type { dialogVariants } from "./dialog.variants";
 
 interface DialogContext {

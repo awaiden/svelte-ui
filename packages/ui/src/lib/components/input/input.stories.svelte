@@ -5,11 +5,11 @@ import Input from "./input.svelte";
 
 const { Story } = defineMeta({
 	component: Input,
-	title: "Input",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Input",
 });
 </script>
 

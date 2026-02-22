@@ -5,11 +5,11 @@ import Separator from "./separator.svelte";
 
 const { Story } = defineMeta({
 	component: Separator,
-	title: "Separator",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Separator",
 });
 </script>
 

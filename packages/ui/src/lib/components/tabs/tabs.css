@@ -1,0 +1,39 @@
+.tabs {
+	@apply flex flex-col gap-2;
+
+	&[data-orientation='vertical'] {
+		@apply flex-row;
+	}
+}
+
+.tabs__list {
+	@apply bg-muted text-muted-foreground inline-flex h-10 items-center justify-center rounded-md p-1;
+
+	&[data-orientation='vertical'] {
+		@apply h-auto flex-col;
+	}
+}
+
+.tabs__trigger {
+	@apply ring-ring/10 inline-flex items-center justify-center rounded-sm px-3 py-1.5 text-sm font-medium whitespace-nowrap transition-all;
+
+	&:focus-visible {
+		@apply status-focused;
+	}
+
+	&[data-disabled] {
+		@apply status-disabled;
+	}
+
+	&[data-state='active'] {
+		@apply bg-background text-foreground shadow-sm;
+	}
+}
+
+.tabs__content {
+	@apply ring-ring/10;
+
+	&:focus-visible {
+		@apply status-focused;
+	}
+}

@@ -1,17 +1,21 @@
 <script lang="ts" module>
-import { cn } from "$lib/utils";
-import { Select, type SelectViewportProps } from "bits-ui";
+import type { Select } from "bits-ui";
+
+import { cn } from "tailwind-variants";
 
 import { getSelectContext } from "./select-context";
 
-export type SelectProps = SelectViewportProps;
+export type SelectViewportProps = Select.ViewportProps;
 </script>
 
 <script lang="ts">
-	let { children, class: className, ...rest }: SelectProps = $props();
+	import { Select as SelectPrimitive } from 'bits-ui';
+
+	let { children, class: className, ...rest }: SelectViewportProps = $props();
+
 	const { slots } = getSelectContext();
 </script>
 
-<Select.Viewport {...rest} class={cn(slots.viewport(), className)}>
+<SelectPrimitive.Viewport class={cn(slots.viewport(), className)} {...rest}>
 	{@render children?.()}
-</Select.Viewport>
+</SelectPrimitive.Viewport>

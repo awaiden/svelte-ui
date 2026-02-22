@@ -1,4 +1,5 @@
 import { createContext } from "svelte";
+
 import type { collapsibleVariants } from "./collapsible.variants";
 
 interface CollapsibleContext {

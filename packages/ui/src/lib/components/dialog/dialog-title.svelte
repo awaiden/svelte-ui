@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getDialogContext } from "./dialog-context";
 
-export interface DialogTitleProps extends Dialog.TitleProps {}
+export type DialogTitleProps = Dialog.TitleProps;
 </script>
 
 <script lang="ts">

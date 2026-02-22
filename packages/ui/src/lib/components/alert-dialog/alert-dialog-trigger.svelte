@@ -1,7 +1,7 @@
 <script lang="ts" module>
 import type { AlertDialog } from "bits-ui";
 
-export interface AlertDialogTriggerProps extends AlertDialog.TriggerProps {}
+export type AlertDialogTriggerProps = AlertDialog.TriggerProps;
 </script>
 
 <script lang="ts">

@@ -1,14 +1,15 @@
 <script module>
 import { defineMeta } from "@storybook/addon-svelte-csf";
+
 import { Switch } from ".";
 import { Label } from "../label";
 
 const { Story } = defineMeta({
-	title: "Switch",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Switch",
 });
 </script>
 

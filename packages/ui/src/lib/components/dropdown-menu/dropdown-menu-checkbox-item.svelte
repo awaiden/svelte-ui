@@ -5,15 +5,14 @@ import { cn } from "tailwind-variants";
 
 import { getDropdownMenuContext } from "./dropdown-menu-context";
 
-export interface DropdownMenuCheckboxItemProps
-	extends DropdownMenu.CheckboxItemProps {}
+export type DropdownMenuCheckboxItemProps = DropdownMenu.CheckboxItemProps;
 </script>
 
 <script lang="ts">
 	import { DropdownMenu as DropdownMenuPrimitive } from 'bits-ui';
 	import LucideCheck from 'lucide-svelte/icons/check';
 
-	let { children, class: className, checked, ...rest }: DropdownMenuCheckboxItemProps = $props();
+	let { checked, children, class: className, ...rest }: DropdownMenuCheckboxItemProps = $props();
 
 	const { slots } = getDropdownMenuContext();
 </script>

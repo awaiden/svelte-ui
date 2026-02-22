@@ -1,17 +1,15 @@
 <script lang="ts" module>
-import { cn } from "$lib/utils";
-import { Select, type SelectGroupProps } from "bits-ui";
+import type { Select } from "bits-ui";
 
-import { getSelectContext } from "./select-context";
-
-export type SelectProps = SelectGroupProps;
+export type SelectGroupProps = Select.GroupProps;
 </script>
 
 <script lang="ts">
-	let { children, class: className, ...rest }: SelectProps = $props();
-	const { slots } = getSelectContext();
+	import { Select as SelectPrimitive } from 'bits-ui';
+
+	let { children, ...rest }: SelectGroupProps = $props();
 </script>
 
-<Select.Group {...rest} class={cn(slots.trigger(), className)}>
+<SelectPrimitive.Group {...rest}>
 	{@render children?.()}
-</Select.Group>
+</SelectPrimitive.Group>

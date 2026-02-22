@@ -1,13 +1,14 @@
 <script module>
 import { defineMeta } from "@storybook/addon-svelte-csf";
+
 import { Accordion } from ".";
 
 const { Story } = defineMeta({
-	title: "Accordion",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Accordion",
 });
 </script>
 

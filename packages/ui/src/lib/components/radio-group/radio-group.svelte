@@ -9,7 +9,7 @@ import {
 	type RadioGroupVariantType,
 } from "./radio-group.variants";
 
-export type RadioGroupRootProps = RadioGroupVariantType & RadioGroup.RootProps;
+export type RadioGroupRootProps = RadioGroup.RootProps & RadioGroupVariantType;
 </script>
 
 <script lang="ts">

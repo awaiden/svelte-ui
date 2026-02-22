@@ -1,13 +1,14 @@
 <script module>
 import { defineMeta } from "@storybook/addon-svelte-csf";
+
 import { Collapsible } from ".";
 
 const { Story } = defineMeta({
-	title: "Collapsible",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Collapsible",
 });
 </script>
 

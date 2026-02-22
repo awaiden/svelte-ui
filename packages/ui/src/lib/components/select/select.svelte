@@ -1,14 +1,16 @@
 <script lang="ts" module>
-import { Select, type SelectRootProps } from "bits-ui";
+import type { Select } from "bits-ui";
 
 import { setSelectContext } from "./select-context";
-import { type SelectVariantType, selectVariants } from "./select.variants";
+import { selectVariants, type SelectVariantType } from "./select.variants";
 
-export type SelectProps = SelectRootProps & SelectVariantType;
+export type SelectRootProps = Select.RootProps & SelectVariantType;
 </script>
 
 <script lang="ts">
-	let { children, value = $bindable(), ...rest }: SelectProps = $props();
+	import { Select as SelectPrimitive } from 'bits-ui';
+
+	let { children,value =$bindable(), ...rest }: SelectRootProps = $props();
 
 	let slots = $derived(selectVariants());
 
@@ -19,6 +21,6 @@ export type SelectProps = SelectRootProps & SelectVariantType;
 	});
 </script>
 
-<Select.Root bind:value={value as never} {...rest}>
+<SelectPrimitive.Root {...rest}>
 	{@render children?.()}
-</Select.Root>
+</SelectPrimitive.Root>

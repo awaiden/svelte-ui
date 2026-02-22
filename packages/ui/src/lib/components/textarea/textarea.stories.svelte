@@ -5,11 +5,11 @@ import Textarea from "./textarea.svelte";
 
 const { Story } = defineMeta({
 	component: Textarea,
-	title: "Textarea",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Textarea",
 });
 </script>
 

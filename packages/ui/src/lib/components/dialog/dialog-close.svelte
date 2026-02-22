@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getDialogContext } from "./dialog-context";
 
-export interface DialogCloseProps extends Dialog.CloseProps {}
+export type DialogCloseProps = Dialog.CloseProps;
 </script>
 
 <script lang="ts">

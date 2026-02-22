@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getDialogContext } from "./dialog-context";
 
-export interface DialogOverlayProps extends Dialog.OverlayProps {}
+export type DialogOverlayProps = Dialog.OverlayProps;
 </script>
 
 <script lang="ts">

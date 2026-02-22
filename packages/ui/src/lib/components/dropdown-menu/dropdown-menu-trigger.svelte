@@ -1,15 +1,19 @@
 <script lang="ts" module>
 import type { DropdownMenu } from "bits-ui";
 
-export interface DropdownMenuTriggerProps extends DropdownMenu.TriggerProps {}
+export type DropdownMenuTriggerProps = DropdownMenu.TriggerProps;
 </script>
 
 <script lang="ts">
 	import { DropdownMenu as DropdownMenuPrimitive } from 'bits-ui';
 
-	let { children, ...rest }: DropdownMenuTriggerProps = $props();
+	let { child, children, ...rest }: DropdownMenuTriggerProps = $props();
 </script>
 
-<DropdownMenuPrimitive.Trigger {...rest}>
-	{@render children?.()}
-</DropdownMenuPrimitive.Trigger>
+{#if child}
+	<DropdownMenuPrimitive.Trigger {child} {...rest} />
+{:else}
+	<DropdownMenuPrimitive.Trigger {...rest}>
+		{@render children?.()}
+	</DropdownMenuPrimitive.Trigger>
+{/if}

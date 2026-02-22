@@ -9,8 +9,8 @@ import {
 	type CollapsibleVariantType,
 } from "./collapsible.variants";
 
-export type CollapsibleRootProps = CollapsibleVariantType &
-	Collapsible.RootProps;
+export type CollapsibleRootProps = Collapsible.RootProps &
+	CollapsibleVariantType;
 </script>
 
 <script lang="ts">

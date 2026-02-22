@@ -1,14 +1,15 @@
 <script module>
 import { defineMeta } from "@storybook/addon-svelte-csf";
+
 import { AlertDialog } from ".";
 import { Button } from "../button";
 
 const { Story } = defineMeta({
-	title: "Alert Dialog",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Alert Dialog",
 });
 </script>
 

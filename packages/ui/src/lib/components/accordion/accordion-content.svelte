@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getAccordionContext } from "./accordion-context";
 
-export interface AccordionContentProps extends Accordion.ContentProps {}
+export type AccordionContentProps = Accordion.ContentProps;
 </script>
 
 <script lang="ts">

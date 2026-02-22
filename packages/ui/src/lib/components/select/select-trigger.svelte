@@ -1,19 +1,25 @@
 <script lang="ts" module>
-import { Select, type SelectTriggerProps } from "bits-ui";
+import type { Select } from "bits-ui";
+
 import { cn } from "tailwind-variants";
 
-import { LucideChevronDown } from "lucide-svelte";
 import { getSelectContext } from "./select-context";
 
-export type SelectProps = SelectTriggerProps;
+export type SelectTriggerProps = Select.TriggerProps;
 </script>
 
 <script lang="ts">
-	let { children, class: className, ...rest }: SelectProps = $props();
+	import { Select as SelectPrimitive } from 'bits-ui';
+	import LucideChevronDown from 'lucide-svelte/icons/chevron-down';
+
+	let { children, class: className, ...rest }: SelectTriggerProps = $props();
+
 	const { slots } = getSelectContext();
 </script>
 
-<Select.Trigger {...rest} class={cn(slots.trigger(), className)}>
-	{@render children?.()}
-	<LucideChevronDown class={slots.icon()} />
-</Select.Trigger>
+<SelectPrimitive.Trigger class={cn(slots.trigger(), className)} {...rest}>
+	{#if children}
+		{@render children()}
+	{/if}
+	<LucideChevronDown class="size-4 opacity-50" />
+</SelectPrimitive.Trigger>

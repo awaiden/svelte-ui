@@ -4,7 +4,7 @@ import type { Dialog } from "bits-ui";
 import { setDialogContext } from "./dialog-context";
 import { dialogVariants, type DialogVariantType } from "./dialog.variants";
 
-export type DialogRootProps = DialogVariantType & Dialog.RootProps;
+export type DialogRootProps = Dialog.RootProps & DialogVariantType;
 </script>
 
 <script lang="ts">

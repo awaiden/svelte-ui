@@ -5,9 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { surfaceVariants, type SurfaceVariantType } from "./surface.variants";
 
-export interface SurfaceProps
-	extends HTMLAttributes<HTMLDivElement>,
-		SurfaceVariantType {}
+export type SurfaceProps = HTMLAttributes<HTMLDivElement> & SurfaceVariantType;
 </script>
 
 <script lang="ts">

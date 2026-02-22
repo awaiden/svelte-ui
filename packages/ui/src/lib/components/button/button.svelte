@@ -6,7 +6,7 @@ import { cn } from "tailwind-variants";
 
 import { buttonVariants, type ButtonVariantType } from "./button.variants";
 
-export interface ButtonProps extends ButtonVariantType, HTMLButtonAttributes {}
+export type ButtonProps = ButtonVariantType & HTMLButtonAttributes;
 </script>
 
 <script lang="ts">

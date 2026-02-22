@@ -7,6 +7,11 @@ import {
 } from "node:fs";
 import { join, resolve } from "node:path";
 
+function toCamel(str: string): string {
+	const pascal = toPascal(str);
+	return pascal.charAt(0).toLowerCase() + pascal.slice(1);
+}
+
 // ── Helpers ──────────────────────────────────────────────────────────
 function toKebab(str: string): string {
 	return str
@@ -20,11 +25,6 @@ function toPascal(str: string): string {
 		.split("-")
 		.map((s) => s.charAt(0).toUpperCase() + s.slice(1))
 		.join("");
-}
-
-function toCamel(str: string): string {
-	const pascal = toPascal(str);
-	return pascal.charAt(0).toLowerCase() + pascal.slice(1);
 }
 
 // ── Resolve paths ────────────────────────────────────────────────────
@@ -63,10 +63,10 @@ function render(template: string): string {
 
 // Map template file names to output file names
 const FILE_MAP: Record<string, string> = {
-	"component.svelte.tpl": `${name}.svelte`,
 	"component.css.tpl": `${name}.css`,
-	"component.variants.ts.tpl": `${name}.variants.ts`,
 	"component.stories.svelte.tpl": `${name}.stories.svelte`,
+	"component.svelte.tpl": `${name}.svelte`,
+	"component.variants.ts.tpl": `${name}.variants.ts`,
 	"index.ts.tpl": "index.ts",
 };
 

@@ -1,14 +1,13 @@
 <script lang="ts" module>
 import type { HTMLAttributes } from "svelte/elements";
 
+import { useId } from "bits-ui";
 import { cn } from "tailwind-variants";
 
 import { setFieldContext } from "./field-context";
-import { type FieldVariantType, fieldVariants } from "./field.variants";
+import { fieldVariants, type FieldVariantType } from "./field.variants";
 
-export interface FieldProps
-	extends FieldVariantType,
-		HTMLAttributes<HTMLDivElement> {}
+export type FieldProps = FieldVariantType & HTMLAttributes<HTMLDivElement>;
 </script>
 
 <script lang="ts">
@@ -17,6 +16,9 @@ export interface FieldProps
 	let slots = $derived(fieldVariants());
 
 	setFieldContext({
+		get id() {
+			return rest.id ?? useId();
+		},
 		get slots() {
 			return slots;
 		}

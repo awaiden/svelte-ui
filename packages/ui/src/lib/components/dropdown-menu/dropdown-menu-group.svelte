@@ -1,7 +1,7 @@
 <script lang="ts" module>
 import type { DropdownMenu } from "bits-ui";
 
-export interface DropdownMenuGroupProps extends DropdownMenu.GroupProps {}
+export type DropdownMenuGroupProps = DropdownMenu.GroupProps;
 </script>
 
 <script lang="ts">

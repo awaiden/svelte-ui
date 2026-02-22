@@ -3,12 +3,11 @@ import type { HTMLAttributes } from "svelte/elements";
 
 import { cn } from "tailwind-variants";
 
-import { getCardContext } from "./card-context";
 import type { CardVariantType } from "./card.variants";
 
-export interface CardProps
-	extends CardVariantType,
-		HTMLAttributes<HTMLParagraphElement> {}
+import { getCardContext } from "./card-context";
+
+export type CardProps = CardVariantType & HTMLAttributes<HTMLParagraphElement>;
 </script>
 
 <script lang="ts">

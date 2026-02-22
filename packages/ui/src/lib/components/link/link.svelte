@@ -5,9 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { linkVariants, type LinkVariantType } from "./link.variants";
 
-export interface LinkProps
-	extends HTMLAttributes<HTMLAnchorElement>,
-		LinkVariantType {}
+export type LinkProps = HTMLAttributes<HTMLAnchorElement> & LinkVariantType;
 </script>
 
 <script lang="ts">

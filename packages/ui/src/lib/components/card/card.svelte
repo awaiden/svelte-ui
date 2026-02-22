@@ -6,9 +6,7 @@ import { cn } from "tailwind-variants";
 import { setCardContext } from "./card-context";
 import { cardVariants, type CardVariantType } from "./card.variants";
 
-export interface CardProps
-	extends CardVariantType,
-		HTMLAttributes<HTMLDivElement> {}
+export type CardProps = CardVariantType & HTMLAttributes<HTMLDivElement>;
 </script>
 
 <script lang="ts">

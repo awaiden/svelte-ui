@@ -5,8 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getDropdownMenuContext } from "./dropdown-menu-context";
 
-export interface DropdownMenuSeparatorProps
-	extends DropdownMenu.SeparatorProps {}
+export type DropdownMenuSeparatorProps = DropdownMenu.SeparatorProps;
 </script>
 
 <script lang="ts">

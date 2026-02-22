@@ -7,8 +7,8 @@ import {
 	type AlertDialogVariantType,
 } from "./alert-dialog.variants";
 
-export type AlertDialogRootProps = AlertDialogVariantType &
-	AlertDialog.RootProps;
+export type AlertDialogRootProps = AlertDialog.RootProps &
+	AlertDialogVariantType;
 </script>
 
 <script lang="ts">

@@ -1,8 +1,7 @@
 <script lang="ts" module>
 import type { DropdownMenu } from "bits-ui";
 
-export interface DropdownMenuRadioGroupProps
-	extends DropdownMenu.RadioGroupProps {}
+export type DropdownMenuRadioGroupProps = DropdownMenu.RadioGroupProps;
 </script>
 
 <script lang="ts">

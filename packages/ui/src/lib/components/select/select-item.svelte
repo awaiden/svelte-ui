@@ -1,19 +1,32 @@
 <script lang="ts" module>
-import { cn } from "$lib/utils";
-import { Select, type SelectItemProps } from "bits-ui";
+import type { Select } from "bits-ui";
+import type { Snippet } from "svelte";
+
+import { cn } from "tailwind-variants";
 
 import { getSelectContext } from "./select-context";
 
-export type SelectProps = SelectItemProps;
+export interface SelectItemProps extends Omit<Select.ItemProps, "children"> {
+	children?: Snippet;
+}
 </script>
 
 <script lang="ts">
-	let { children: childrenSnippet, class: className, ...rest }: SelectProps = $props();
+	import { Select as SelectPrimitive } from 'bits-ui';
+	import LucideCheck from 'lucide-svelte/icons/check';
+
+	let { children: userChildren, class: className, ...rest }: SelectItemProps = $props();
+
 	const { slots } = getSelectContext();
 </script>
 
-<Select.Item {...rest} class={cn(slots.item(), className)}>
-	{#snippet children(params)}
-		{@render childrenSnippet?.(params)}
+<SelectPrimitive.Item class={cn(slots.item(), className)} {...rest}>
+	{#snippet children({ selected })}
+		<span class="absolute left-2 flex size-3.5 items-center justify-center">
+			{#if selected}
+				<LucideCheck class="size-4" />
+			{/if}
+		</span>
+		{@render userChildren?.()}
 	{/snippet}
-</Select.Item>
+</SelectPrimitive.Item>

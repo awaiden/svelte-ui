@@ -1,0 +1,67 @@
+.slider {
+	@apply relative flex w-full touch-none items-center select-none;
+
+	&[data-orientation='vertical'] {
+		@apply h-full w-auto flex-col;
+	}
+
+	&[data-disabled] {
+		@apply status-disabled;
+	}
+}
+
+.slider__range {
+	@apply bg-primary absolute h-full;
+
+	[data-orientation='vertical'] > & {
+		@apply h-auto w-full;
+	}
+
+	[data-disabled] > & {
+		@apply bg-primary/50;
+	}
+}
+
+.slider__thumb {
+	@apply border-primary bg-background z-10 block size-5 cursor-pointer rounded-full border-2 shadow-sm transition-colors;
+
+	&:focus-visible {
+		@apply status-focused;
+	}
+
+	&[data-disabled] {
+		@apply pointer-events-none opacity-50;
+	}
+
+	&[data-active] {
+		@apply scale-[1.1];
+	}
+}
+
+.slider__tick {
+	@apply bg-muted-foreground/30 z-1 block;
+
+	[data-orientation='horizontal'] > & {
+		@apply h-2 w-px;
+	}
+
+	[data-orientation='vertical'] > & {
+		@apply h-px w-2;
+	}
+
+	&[data-bounded] {
+		@apply bg-primary-foreground/50;
+	}
+}
+
+.slider__tick-label {
+	@apply text-muted-foreground text-xs leading-none font-medium;
+
+	&[data-bounded] {
+		@apply text-foreground;
+	}
+}
+
+.slider__thumb-label {
+	@apply bg-muted text-foreground z-10 rounded-md px-2 py-1 text-sm text-nowrap;
+}

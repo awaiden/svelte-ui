@@ -1,14 +1,15 @@
 <script module>
 import { defineMeta } from "@storybook/addon-svelte-csf";
+
 import { RadioGroup } from ".";
 import { Label } from "../label";
 
 const { Story } = defineMeta({
-	title: "RadioGroup",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "RadioGroup",
 });
 </script>
 

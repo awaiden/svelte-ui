@@ -8,9 +8,7 @@ import {
 	type TextareaVariantType,
 } from "./textarea.variants";
 
-export interface TextareaProps
-	extends HTMLTextareaAttributes,
-		TextareaVariantType {}
+export type TextareaProps = HTMLTextareaAttributes & TextareaVariantType;
 </script>
 
 <script lang="ts">

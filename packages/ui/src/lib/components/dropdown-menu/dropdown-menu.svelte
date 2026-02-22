@@ -7,8 +7,8 @@ import {
 	type DropdownMenuVariantType,
 } from "./dropdown-menu.variants";
 
-export type DropdownMenuRootProps = DropdownMenuVariantType &
-	DropdownMenu.RootProps;
+export type DropdownMenuRootProps = DropdownMenu.RootProps &
+	DropdownMenuVariantType;
 </script>
 
 <script lang="ts">

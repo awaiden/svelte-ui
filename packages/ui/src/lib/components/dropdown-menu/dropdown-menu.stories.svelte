@@ -1,26 +1,28 @@
 <script module>
 import { defineMeta } from "@storybook/addon-svelte-csf";
+
 import { DropdownMenu } from ".";
 import { Button } from "../button";
 
 const { Story } = defineMeta({
-	title: "Dropdown Menu",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Dropdown Menu",
 });
 </script>
 
 <Story name="Default">
 	<DropdownMenu.Root>
 		<DropdownMenu.Trigger>
-			<Button variant="outline">Open</Button>
+			{#snippet child({ props })}
+				<Button variant="outline" {...props}>Open</Button>
+			{/snippet}
 		</DropdownMenu.Trigger>
 		<DropdownMenu.Content class="w-56">
-			<DropdownMenu.GroupHeading>My Account</DropdownMenu.GroupHeading>
-			<DropdownMenu.Separator />
 			<DropdownMenu.Group>
+				<DropdownMenu.GroupHeading>My Account</DropdownMenu.GroupHeading>
 				<DropdownMenu.Item>
 					Profile
 					<DropdownMenu.Shortcut>⌘P</DropdownMenu.Shortcut>

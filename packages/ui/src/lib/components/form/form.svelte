@@ -5,9 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { formVariants, type FormVariantType } from "./form.variants";
 
-export interface FormProps
-	extends FormVariantType,
-		HTMLAttributes<HTMLDivElement> {}
+export type FormProps = FormVariantType & HTMLAttributes<HTMLDivElement>;
 </script>
 
 <script lang="ts">

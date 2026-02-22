@@ -4,11 +4,11 @@ import { defineMeta } from "@storybook/addon-svelte-csf";
 import Surface from "./surface.svelte";
 
 const { Story } = defineMeta({
-	title: "Surface",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Surface",
 });
 </script>
 

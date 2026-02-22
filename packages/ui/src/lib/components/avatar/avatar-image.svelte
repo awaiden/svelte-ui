@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getAvatarContext } from "./avatar-context";
 
-export interface AvatarImageProps extends Avatar.ImageProps {}
+export type AvatarImageProps = Avatar.ImageProps;
 </script>
 
 <script lang="ts">

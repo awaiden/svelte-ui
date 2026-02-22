@@ -1,17 +1,21 @@
 <script lang="ts" module>
-import { cn } from "$lib/utils";
-import { Select, type SelectGroupHeadingProps } from "bits-ui";
+import type { Select } from "bits-ui";
+
+import { cn } from "tailwind-variants";
 
 import { getSelectContext } from "./select-context";
 
-export type SelectProps = SelectGroupHeadingProps;
+export type SelectGroupHeadingProps = Select.GroupHeadingProps;
 </script>
 
 <script lang="ts">
-	let { children, class: className, ...rest }: SelectProps = $props();
+	import { Select as SelectPrimitive } from 'bits-ui';
+
+	let { children, class: className, ...rest }: SelectGroupHeadingProps = $props();
+
 	const { slots } = getSelectContext();
 </script>
 
-<Select.GroupHeading {...rest} class={cn(slots.trigger(), className)}>
+<SelectPrimitive.GroupHeading class={cn(slots.groupHeading(), className)} {...rest}>
 	{@render children?.()}
-</Select.GroupHeading>
+</SelectPrimitive.GroupHeading>

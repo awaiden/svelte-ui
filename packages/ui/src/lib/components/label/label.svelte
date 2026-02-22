@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { labelVariants, type LabelVariantType } from "./label.variants";
 
-export interface LabelProps extends HTMLLabelAttributes, LabelVariantType {}
+export type LabelProps = HTMLLabelAttributes & LabelVariantType;
 </script>
 
 <script lang="ts">

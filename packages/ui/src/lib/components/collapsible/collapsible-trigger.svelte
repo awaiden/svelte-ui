@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getCollapsibleContext } from "./collapsible-context";
 
-export interface CollapsibleTriggerProps extends Collapsible.TriggerProps {}
+export type CollapsibleTriggerProps = Collapsible.TriggerProps;
 </script>
 
 <script lang="ts">

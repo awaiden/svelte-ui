@@ -5,11 +5,11 @@ import Link from "./link.svelte";
 
 const { Story } = defineMeta({
 	component: Link,
-	title: "Link",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Link",
 });
 </script>
 

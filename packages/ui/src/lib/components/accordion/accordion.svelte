@@ -9,7 +9,7 @@ import {
 	type AccordionVariantType,
 } from "./accordion.variants";
 
-export type AccordionRootProps = AccordionVariantType & Accordion.RootProps;
+export type AccordionRootProps = Accordion.RootProps & AccordionVariantType;
 </script>
 
 <script lang="ts">
@@ -26,6 +26,7 @@ export type AccordionRootProps = AccordionVariantType & Accordion.RootProps;
 	});
 </script>
 
+<!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -- Bits UI discriminated union requires type assertion for spreading -->
 <AccordionPrimitive.Root class={cn(slots.root(), className)} {...rest as any}>
 	{@render children?.()}
 </AccordionPrimitive.Root>

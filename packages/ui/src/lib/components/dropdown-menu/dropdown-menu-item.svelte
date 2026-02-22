@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getDropdownMenuContext } from "./dropdown-menu-context";
 
-export interface DropdownMenuItemProps extends DropdownMenu.ItemProps {}
+export type DropdownMenuItemProps = DropdownMenu.ItemProps;
 </script>
 
 <script lang="ts">

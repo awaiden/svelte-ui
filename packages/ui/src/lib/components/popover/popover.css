@@ -1,0 +1,47 @@
+.popover__content {
+	@apply bg-surface text-surface-foreground z-50 w-72 rounded-md border p-4 shadow-md outline-none;
+
+	&[data-state='open'] {
+		@apply animate-in fade-in-0 zoom-in-95;
+	}
+
+	&[data-state='closed'] {
+		@apply animate-out fade-out-0 zoom-out-95;
+	}
+
+	&[data-side='bottom'] {
+		@apply slide-in-from-top-2;
+	}
+
+	&[data-side='left'] {
+		@apply slide-in-from-right-2;
+	}
+
+	&[data-side='right'] {
+		@apply slide-in-from-left-2;
+	}
+
+	&[data-side='top'] {
+		@apply slide-in-from-bottom-2;
+	}
+}
+
+.popover__close {
+	@apply absolute top-3 right-3 rounded-sm opacity-70 transition-opacity;
+
+	&:hover {
+		@apply opacity-100;
+	}
+
+	&:focus-visible {
+		@apply status-focused;
+	}
+
+	&:disabled {
+		@apply status-disabled;
+	}
+}
+
+.popover__arrow {
+	@apply fill-surface;
+}

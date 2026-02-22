@@ -1,4 +1,5 @@
 import { createContext } from "svelte";
+
 import type { avatarVariants } from "./avatar.variants";
 
 interface AvatarContext {

@@ -1,14 +1,15 @@
 <script lang="ts" module>
 import { defineMeta } from "@storybook/addon-svelte-csf";
+import { Button, Card, Field, Input } from "$lib/components";
+
 import { Form } from ".";
-import { Card, Input, Field, Button } from "$lib/components";
 
 const { Story } = defineMeta({
-	title: "Form",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Form",
 });
 </script>
 

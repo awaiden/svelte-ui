@@ -1,13 +1,14 @@
 <script module>
 import { defineMeta } from "@storybook/addon-svelte-csf";
+
 import { Avatar } from ".";
 
 const { Story } = defineMeta({
-	title: "Avatar",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Avatar",
 });
 </script>
 

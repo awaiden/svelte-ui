@@ -5,11 +5,11 @@ import Label from "./label.svelte";
 
 const { Story } = defineMeta({
 	component: Label,
-	title: "Label",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Label",
 });
 </script>
 

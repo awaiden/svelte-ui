@@ -1,15 +1,16 @@
 <script lang="ts" module>
 import { defineMeta } from "@storybook/addon-svelte-csf";
-import { Field } from ".";
-import { Input } from "../input";
 import { LucideUser } from "lucide-svelte";
 
+import { Field } from ".";
+import { Input } from "../input";
+
 const { Story } = defineMeta({
-	title: "Field",
-	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
 	},
+	tags: ["autodocs"],
+	title: "Field",
 });
 </script>
 

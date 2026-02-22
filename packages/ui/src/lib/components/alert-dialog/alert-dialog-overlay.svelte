@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getAlertDialogContext } from "./alert-dialog-context";
 
-export interface AlertDialogOverlayProps extends AlertDialog.OverlayProps {}
+export type AlertDialogOverlayProps = AlertDialog.OverlayProps;
 </script>
 
 <script lang="ts">

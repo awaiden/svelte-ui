@@ -1,5 +1,6 @@
 <script lang="ts" module>
 import type { SeparatorRootProps } from "bits-ui";
+
 import { cn } from "tailwind-variants";
 
 import {
@@ -7,9 +8,7 @@ import {
 	type SeparatorVariantType,
 } from "./separator.variants";
 
-export interface SeparatorProps
-	extends SeparatorRootProps,
-		SeparatorVariantType {}
+export type SeparatorProps = SeparatorRootProps & SeparatorVariantType;
 </script>
 
 <script lang="ts">

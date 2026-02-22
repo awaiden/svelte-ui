@@ -1,0 +1,7 @@
+.meter {
+	@apply bg-secondary relative h-4 w-full overflow-hidden rounded-full;
+}
+
+.meter__indicator {
+	@apply bg-primary h-full w-full flex-1 rounded-full transition-transform duration-500 ease-in-out;
+}

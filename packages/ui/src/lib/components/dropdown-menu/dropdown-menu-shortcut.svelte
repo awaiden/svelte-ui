@@ -5,8 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { getDropdownMenuContext } from "./dropdown-menu-context";
 
-export interface DropdownMenuShortcutProps
-	extends HTMLAttributes<HTMLSpanElement> {}
+export type DropdownMenuShortcutProps = HTMLAttributes<HTMLSpanElement>;
 </script>
 
 <script lang="ts">

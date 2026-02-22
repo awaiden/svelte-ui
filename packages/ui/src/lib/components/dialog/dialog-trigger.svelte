@@ -1,7 +1,7 @@
 <script lang="ts" module>
 import type { Dialog } from "bits-ui";
 
-export interface DialogTriggerProps extends Dialog.TriggerProps {}
+export type DialogTriggerProps = Dialog.TriggerProps;
 </script>
 
 <script lang="ts">

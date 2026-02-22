@@ -1,4 +1,5 @@
 import { createContext } from "svelte";
+
 import type { switchVariants } from "./switch.variants";
 
 interface SwitchContext {

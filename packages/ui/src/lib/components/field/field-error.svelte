@@ -3,12 +3,12 @@ import type { HTMLAttributes } from "svelte/elements";
 
 import { cn } from "tailwind-variants";
 
-import { getFieldContext } from "./field-context";
 import type { FieldVariantType } from "./field.variants";
 
-export interface FieldProps
-	extends FieldVariantType,
-		HTMLAttributes<HTMLParagraphElement> {}
+import { getFieldContext } from "./field-context";
+
+export type FieldProps = FieldVariantType &
+	HTMLAttributes<HTMLParagraphElement>;
 </script>
 
 <script lang="ts">

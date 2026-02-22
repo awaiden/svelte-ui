@@ -6,7 +6,7 @@ import { cn } from "tailwind-variants";
 import { setAvatarContext } from "./avatar-context";
 import { avatarVariants, type AvatarVariantType } from "./avatar.variants";
 
-export type AvatarRootProps = AvatarVariantType & Avatar.RootProps;
+export type AvatarRootProps = Avatar.RootProps & AvatarVariantType;
 </script>
 
 <script lang="ts">

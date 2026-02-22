@@ -5,7 +5,7 @@ import { cn } from "tailwind-variants";
 
 import { inputVariants, type InputVariantType } from "./input.variants";
 
-export interface InputProps extends HTMLInputAttributes, InputVariantType {}
+export type InputProps = HTMLInputAttributes & InputVariantType;
 </script>
 
 <script lang="ts">
