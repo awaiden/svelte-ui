@@ -1,6 +1,6 @@
-import { createContext } from "svelte";
+import { createContext } from 'svelte';
 
-import type { cardVariants } from "./card.variants";
+import type { cardVariants } from './card.variants';
 
 interface CardContext {
 	slots: ReturnType<typeof cardVariants>;

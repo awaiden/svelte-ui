@@ -1,15 +1,12 @@
 <script lang="ts" module>
-import type { Accordion } from "bits-ui";
+	import type { Accordion } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { setAccordionContext } from "./accordion-context";
-import {
-	accordionVariants,
-	type AccordionVariantType,
-} from "./accordion.variants";
+	import { setAccordionContext } from './accordion-context';
+	import { accordionVariants, type AccordionVariantType } from './accordion.variants';
 
-export type AccordionRootProps = Accordion.RootProps & AccordionVariantType;
+	export type AccordionRootProps = Accordion.RootProps & AccordionVariantType;
 </script>
 
 <script lang="ts">

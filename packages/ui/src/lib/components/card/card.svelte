@@ -1,12 +1,12 @@
 <script lang="ts" module>
-import type { HTMLAttributes } from "svelte/elements";
+	import type { HTMLAttributes } from 'svelte/elements';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { setCardContext } from "./card-context";
-import { cardVariants, type CardVariantType } from "./card.variants";
+	import { setCardContext } from './card-context';
+	import { cardVariants, type CardVariantType } from './card.variants';
 
-export type CardProps = CardVariantType & HTMLAttributes<HTMLDivElement>;
+	export type CardProps = CardVariantType & HTMLAttributes<HTMLDivElement>;
 </script>
 
 <script lang="ts">

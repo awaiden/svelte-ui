@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Dialog } from "bits-ui";
+	import type { Dialog } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getDialogContext } from "./dialog-context";
+	import { getDialogContext } from './dialog-context';
 
-export type DialogTitleProps = Dialog.TitleProps;
+	export type DialogTitleProps = Dialog.TitleProps;
 </script>
 
 <script lang="ts">

@@ -1,13 +1,13 @@
 <script lang="ts" module>
-import type { Select } from "bits-ui";
+	import type { Select } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getSelectContext } from "./select-context";
+	import { getSelectContext } from './select-context';
 
-export interface SelectContentProps extends Select.ContentProps {
-	sideOffset?: number;
-}
+	export interface SelectContentProps extends Select.ContentProps {
+		sideOffset?: number;
+	}
 </script>
 
 <script lang="ts">

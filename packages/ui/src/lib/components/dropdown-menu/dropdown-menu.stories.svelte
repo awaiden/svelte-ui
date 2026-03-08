@@ -1,16 +1,16 @@
 <script module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import { DropdownMenu } from ".";
-import { Button } from "../button";
+	import { DropdownMenu } from '.';
+	import { Button } from '../button';
 
-const { Story } = defineMeta({
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Dropdown Menu",
-});
+	const { Story } = defineMeta({
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Dropdown Menu'
+	});
 </script>
 
 <Story name="Default">

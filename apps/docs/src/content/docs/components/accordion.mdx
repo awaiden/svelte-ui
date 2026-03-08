@@ -1,0 +1,117 @@
+---
+title: Accordion
+description: A vertically stacked set of interactive headings that each reveal a section of content.
+---
+
+import { Accordion } from '@adn-ui/svelte';
+import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
+
+import AccordionExample from '../../../components/AccordionExample.svelte';
+
+The `Accordion` component allows users to toggle the visibility of sections of content. It is built on top of [Bits UI](https://bits-ui.com/docs/components/accordion) and supports both single and multiple expansion modes.
+
+## Usage
+
+To use the `Accordion`, import the root component and its sub-components from `@adn-ui/svelte`.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Accordion } from "@adn-ui/svelte";
+</script>
+
+<Accordion.Root type="single">
+  <Accordion.Item value="item-1">
+    <Accordion.Header>
+      <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
+    </Accordion.Header>
+    <Accordion.Content>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </Accordion.Content>
+  </Accordion.Item>
+  
+  <Accordion.Item value="item-2">
+    <Accordion.Header>
+      <Accordion.Trigger>Is it styled?</Accordion.Trigger>
+    </Accordion.Header>
+    <Accordion.Content>
+      Yes. It comes with default styles that match the other components' aesthetic.
+    </Accordion.Content>
+  </Accordion.Item>
+</Accordion.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Single Expansion (Default)
+
+In `single` mode, only one item can be open at a time.
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<AccordionExample client:load type="single" />
+</div>
+
+```svelte
+<Accordion.Root type="single" value="item-1">
+	<!-- Items... -->
+</Accordion.Root>
+```
+
+### Multiple Expansion
+
+In `multiple` mode, several items can be open simultaneously.
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<AccordionExample client:load type="multiple" />
+</div>
+
+```svelte
+<Accordion.Root type="multiple">
+	<!-- Items... -->
+</Accordion.Root>
+```
+
+## API Reference
+
+### Accordion.Root
+
+The main container for the accordion items.
+
+| Prop          | Type                     | Default     | Description                                                     |
+| :------------ | :----------------------- | :---------- | :-------------------------------------------------------------- |
+| `type`        | `"single" \| "multiple"` | `undefined` | Determines whether one or multiple items can be opened at once. |
+| `value`       | `string \| string[]`     | `undefined` | The controlled value of the open item(s).                       |
+| `disabled`    | `boolean`                | `false`     | Whether the entire accordion is disabled.                       |
+| `collapsible` | `boolean`                | `false`     | (Only for `type="single"`) Whether the open item can be closed. |
+
+### Accordion.Item
+
+A single section of the accordion.
+
+| Prop       | Type      | Default      | Description                   |
+| :--------- | :-------- | :----------- | :---------------------------- |
+| `value`    | `string`  | **Required** | A unique value for the item.  |
+| `disabled` | `boolean` | `false`      | Whether the item is disabled. |
+
+### Accordion.Header
+
+The header element for the accordion item. Usually wraps the `Accordion.Trigger`.
+
+### Accordion.Trigger
+
+The button that toggles the item's visibility.
+
+### Accordion.Content
+
+The container for the item's collapsible content.
+
+## Accessibility
+
+The `Accordion` component follows the [WAI-ARIA Accordion Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/):
+
+- **Keyboard Support:** Supports standard keyboard interactions (`Enter`, `Space`, `ArrowDown`, `ArrowUp`, `Home`, `End`).
+- **ARIA Attributes:** Automatically manages `aria-expanded`, `aria-controls`, and `aria-labelledby`.
+- **Focus Management:** Visual focus indicators are provided for the triggers.

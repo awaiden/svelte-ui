@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Accordion } from "bits-ui";
+	import type { Accordion } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getAccordionContext } from "./accordion-context";
+	import { getAccordionContext } from './accordion-context';
 
-export type AccordionContentProps = Accordion.ContentProps;
+	export type AccordionContentProps = Accordion.ContentProps;
 </script>
 
 <script lang="ts">
@@ -17,7 +17,7 @@ export type AccordionContentProps = Accordion.ContentProps;
 </script>
 
 <AccordionPrimitive.Content class={cn(slots.content(), className)} {...rest}>
-	<div class="pt-0 pb-4">
+	<div class="w-full pt-0 pb-4">
 		{@render children?.()}
 	</div>
 </AccordionPrimitive.Content>

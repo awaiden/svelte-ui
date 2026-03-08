@@ -1,0 +1,141 @@
+---
+title: Button
+description: A clickable element used to trigger actions and events.
+---
+
+import { Button } from '@adn-ui/svelte';
+import { Aside, Card, CardGrid, TabItem, Tabs } from '@astrojs/starlight/components';
+
+The `Button` component is used to trigger an action or event when clicked. It is one of the most common UI elements and can be styled with various variants and sizes.
+
+## Usage
+
+To use the `Button`, import it from `@adn-ui/svelte`.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Button } from "@adn-ui/svelte";
+</script>
+
+<Button variant="primary" onclick={() => console.log("Button clicked!")}>
+  Click Me
+</Button>
+```
+  </TabItem>
+</Tabs>
+
+## Variants
+
+The `Button` supports several visual variants to communicate different levels of importance or purpose.
+
+<div class="not-prose mb-6 flex flex-wrap items-center gap-4 rounded-lg border bg-surface p-6">
+	<Button client:load variant="primary">
+		Primary
+	</Button>
+	<Button client:load variant="secondary">
+		Secondary
+	</Button>
+	<Button client:load variant="outline">
+		Outline
+	</Button>
+	<Button client:load variant="ghost">
+		Ghost
+	</Button>
+</div>
+
+### Primary (Default)
+
+Used for the main action on a page. Typically, there should be only one primary button per view.
+
+```svelte
+<Button variant="primary">Primary Action</Button>
+```
+
+### Secondary
+
+Used for secondary actions that are less critical or to avoid competing with a primary action.
+
+```svelte
+<Button variant="secondary">Secondary Action</Button>
+```
+
+### Outline
+
+Used for secondary actions that require some visibility but are not as prominent as primary or secondary variants.
+
+```svelte
+<Button variant="outline">Outline Action</Button>
+```
+
+### Ghost
+
+Used for subtle actions, often found in toolbars, menus, or next to other primary/secondary buttons.
+
+```svelte
+<Button variant="ghost">Ghost Action</Button>
+```
+
+## Sizes
+
+The `Button` component comes in three standard sizes: `sm`, `md` (default), and `lg`.
+
+<div class="not-prose mb-6 flex items-center gap-4 rounded-lg border bg-surface p-6">
+	<Button client:load size="sm">
+		Small
+	</Button>
+	<Button client:load size="md">
+		Medium
+	</Button>
+	<Button client:load size="lg">
+		Large
+	</Button>
+</div>
+
+```svelte
+<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>
+<Button size="lg">Large</Button>
+```
+
+## Icons
+
+Buttons can include icons to provide more context. You can use any icon library like `lucide-svelte`.
+
+<Aside type="tip">
+	When creating a button that only contains an icon, use the `isIconOnly` prop to ensure proper
+	padding and dimensions.
+</Aside>
+
+```svelte
+<script>
+	import { Button } from '@adn-ui/svelte';
+	import { LucideSearch } from 'lucide-svelte';
+</script>
+
+<Button isIconOnly client:load>
+	<LucideSearch />
+</Button>
+```
+
+## API Reference
+
+### Props
+
+The `Button` component accepts all standard `<button>` attributes as well as the following custom props:
+
+| Prop         | Type                                               | Default     | Description                                        |
+| :----------- | :------------------------------------------------- | :---------- | :------------------------------------------------- |
+| `variant`    | `"primary" \| "secondary" \| "outline" \| "ghost"` | `"primary"` | The visual style of the button.                    |
+| `size`       | `"sm" \| "md" \| "lg"`                             | `"md"`      | The size of the button.                            |
+| `isIconOnly` | `boolean`                                          | `false`     | Set to `true` if the button only contains an icon. |
+| `class`      | `string`                                           | `undefined` | Additional CSS classes to apply to the button.     |
+
+## Accessibility
+
+Built on top of [Bits UI](https://bits-ui.com/), the `Button` component is accessible by default:
+
+- **Keyboard Support:** Supports standard keyboard interactions (`Enter`, `Space`).
+- **Focus States:** High-visibility focus rings are included for keyboard users.
+- **Disabled State:** Correctly applies `aria-disabled` and prevents interaction when disabled.

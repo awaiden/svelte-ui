@@ -1,10 +1,9 @@
-import { createContext } from "svelte";
+import { createContext } from 'svelte';
 
-import type { dialogVariants } from "./dialog.variants";
+import type { dialogVariants } from './dialog.variants';
 
 interface DialogContext {
 	slots: ReturnType<typeof dialogVariants>;
 }
 
-export const [getDialogContext, setDialogContext] =
-	createContext<DialogContext>();
+export const [getDialogContext, setDialogContext] = createContext<DialogContext>();

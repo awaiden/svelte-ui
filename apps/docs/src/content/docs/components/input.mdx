@@ -1,0 +1,45 @@
+---
+title: Input
+description: A fundamental form element for text input.
+---
+
+import { Input } from '@adn-ui/svelte';
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+The `Input` component allows users to enter and edit text. It is a wrapper around the standard `<input>` element with themed styling.
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Input } from "@adn-ui/svelte";
+</script>
+
+<Input type="text" placeholder="Enter your name" />
+```
+  </TabItem>
+</Tabs>
+
+## Showcase
+
+<div class="not-prose mb-6 flex flex-col gap-4 rounded-lg border bg-surface p-6">
+	<Input client:load placeholder="Default input" type="text" />
+	<Input client:load placeholder="Password input" type="password" />
+	<Input client:load placeholder="Email input" type="email" />
+	<Input client:load disabled placeholder="Disabled input" />
+</div>
+
+## API Reference
+
+The `Input` component accepts all standard `<input>` attributes.
+
+| Prop    | Type     | Default     | Description                      |
+| :------ | :------- | :---------- | :------------------------------- |
+| `class` | `string` | `undefined` | Additional CSS classes to apply. |
+
+## Accessibility
+
+- The component uses the native `<input>` element.
+- Ensure you associate a `Label` with each `Input` for proper accessibility.

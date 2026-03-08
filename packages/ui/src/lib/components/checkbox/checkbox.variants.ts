@@ -1,9 +1,9 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv, type VariantProps } from 'tailwind-variants';
 
 export const checkboxVariants = tv({
-	base: "checkbox",
+	base: 'checkbox',
 	defaultVariants: {},
-	variants: {},
+	variants: {}
 });
 
 export type CheckboxVariantType = VariantProps<typeof checkboxVariants>;

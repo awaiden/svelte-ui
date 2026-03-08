@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { HTMLAttributes } from "svelte/elements";
+	import type { HTMLAttributes } from 'svelte/elements';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getDialogContext } from "./dialog-context";
+	import { getDialogContext } from './dialog-context';
 
-export type DialogHeaderProps = HTMLAttributes<HTMLDivElement>;
+	export type DialogHeaderProps = HTMLAttributes<HTMLDivElement>;
 </script>
 
 <script lang="ts">

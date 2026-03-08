@@ -1,7 +1,7 @@
 <script lang="ts" module>
-import type { Select } from "bits-ui";
+	import type { Select } from 'bits-ui';
 
-export type SelectGroupProps = Select.GroupProps;
+	export type SelectGroupProps = Select.GroupProps;
 </script>
 
 <script lang="ts">

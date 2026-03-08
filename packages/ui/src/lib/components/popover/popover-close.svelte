@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Popover } from "bits-ui";
+	import type { Popover } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getPopoverContext } from "./popover-context";
+	import { getPopoverContext } from './popover-context';
 
-export type PopoverCloseProps = Popover.CloseProps;
+	export type PopoverCloseProps = Popover.CloseProps;
 </script>
 
 <script lang="ts">

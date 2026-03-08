@@ -1,0 +1,51 @@
+---
+title: Textarea
+description: A multi-line text input field.
+---
+
+import { Label, Textarea } from '@adn-ui/svelte';
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+The `Textarea` component allows users to enter and edit multiple lines of text.
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Textarea, Label } from "@adn-ui/svelte";
+</script>
+
+<div class="flex flex-col gap-2">
+  <Label for="bio">Biography</Label>
+  <Textarea id="bio" placeholder="Tell us about yourself..." />
+</div>
+```
+  </TabItem>
+</Tabs>
+
+## Showcase
+
+<div class="not-prose mb-6 flex flex-col gap-4 rounded-lg border bg-surface p-6">
+	<div class="flex flex-col gap-1.5">
+		<Label client:load for="showcase-textarea">
+			Feedback
+		</Label>
+		<Textarea client:load id="showcase-textarea" placeholder="Enter your feedback here" />
+	</div>
+	<Textarea client:load disabled placeholder="Disabled textarea" />
+</div>
+
+## API Reference
+
+The `Textarea` component accepts all standard `<textarea>` attributes.
+
+| Prop    | Type     | Default     | Description                      |
+| :------ | :------- | :---------- | :------------------------------- |
+| `class` | `string` | `undefined` | Additional CSS classes to apply. |
+
+## Accessibility
+
+- The component uses the native `<textarea>` element.
+- Ensure you associate a `Label` with each `Textarea` for proper accessibility.

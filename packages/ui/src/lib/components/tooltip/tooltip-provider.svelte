@@ -1,7 +1,7 @@
 <script lang="ts" module>
-import type { Tooltip } from "bits-ui";
+	import type { Tooltip } from 'bits-ui';
 
-export type TooltipProviderProps = Tooltip.ProviderProps;
+	export type TooltipProviderProps = Tooltip.ProviderProps;
 </script>
 
 <script lang="ts">

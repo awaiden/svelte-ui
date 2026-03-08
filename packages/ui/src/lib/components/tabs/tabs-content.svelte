@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Tabs } from "bits-ui";
+	import type { Tabs } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getTabsContext } from "./tabs-context";
+	import { getTabsContext } from './tabs-context';
 
-export type TabsContentProps = Tabs.ContentProps;
+	export type TabsContentProps = Tabs.ContentProps;
 </script>
 
 <script lang="ts">

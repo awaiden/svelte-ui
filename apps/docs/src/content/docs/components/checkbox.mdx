@@ -1,0 +1,68 @@
+---
+title: Checkbox
+description: A control that allows the user to toggle between checked and unchecked states.
+---
+
+import { Checkbox } from '@adn-ui/svelte';
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+import CheckboxExample from '../../../components/CheckboxExample.svelte';
+
+The `Checkbox` component is used to select one or more options from a set. It is built on top of [Bits UI](https://bits-ui.com/docs/components/checkbox).
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Checkbox, Label } from "@adn-ui/svelte";
+</script>
+
+<div class="flex items-center space-x-2">
+  <Checkbox id="terms" />
+  <Label for="terms">Accept terms and conditions</Label>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Basic
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<CheckboxExample client:load />
+</div>
+
+### Disabled
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<CheckboxExample client:load disabled />
+</div>
+
+### Indeterminate
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<CheckboxExample client:load indeterminate />
+</div>
+
+## API Reference
+
+### Checkbox
+
+| Prop       | Type                         | Default     | Description                                           |
+| :--------- | :--------------------------- | :---------- | :---------------------------------------------------- |
+| `checked`  | `boolean \| "indeterminate"` | `false`     | The checked state of the checkbox.                    |
+| `disabled` | `boolean`                    | `false`     | Whether the checkbox is disabled.                     |
+| `required` | `boolean`                    | `false`     | Whether the checkbox is required for form submission. |
+| `name`     | `string`                     | `undefined` | The name of the checkbox for form submission.         |
+| `value`    | `string`                     | `"on"`      | The value of the checkbox for form submission.        |
+
+## Accessibility
+
+The `Checkbox` component follows the [WAI-ARIA Checkbox Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/):
+
+- **Keyboard Support:** Supports `Space` to toggle the checked state.
+- **ARIA Attributes:** Automatically manages `aria-checked`, `aria-disabled`, and `aria-required`.
+- **Focus Management:** Visual focus indicators are provided.

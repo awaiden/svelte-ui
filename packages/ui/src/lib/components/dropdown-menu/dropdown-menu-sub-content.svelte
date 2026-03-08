@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { DropdownMenu } from "bits-ui";
+	import type { DropdownMenu } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getDropdownMenuContext } from "./dropdown-menu-context";
+	import { getDropdownMenuContext } from './dropdown-menu-context';
 
-export type DropdownMenuSubContentProps = DropdownMenu.SubContentProps;
+	export type DropdownMenuSubContentProps = DropdownMenu.SubContentProps;
 </script>
 
 <script lang="ts">

@@ -1,10 +1,9 @@
-import { createContext } from "svelte";
+import { createContext } from 'svelte';
 
-import type { popoverVariants } from "./popover.variants";
+import type { popoverVariants } from './popover.variants';
 
 interface PopoverContext {
 	slots: ReturnType<typeof popoverVariants>;
 }
 
-export const [getPopoverContext, setPopoverContext] =
-	createContext<PopoverContext>();
+export const [getPopoverContext, setPopoverContext] = createContext<PopoverContext>();

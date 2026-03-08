@@ -1,0 +1,34 @@
+---
+title: Svelte UI
+description: A modern, accessible UI component library built for Svelte 5.
+template: splash
+hero:
+  tagline: High-performance, accessible, and fully customizable components for your next Svelte application.
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Get Started
+      link: /guides/quick-start/
+      icon: right-arrow
+    - text: View Showcase
+      link: /showcase/
+      icon: rocket
+      variant: primary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+	<Card icon="rocket" title="Svelte 5 Runes">
+		Leverage the latest reactivity system with Runes and Snippets for better performance and DX.
+	</Card>
+	<Card icon="puzzle" title="Accessible & Headless">
+		Powered by **Bits UI**, ensuring all components follow WAI-ARIA guidelines by default.
+	</Card>
+	<Card icon="setting" title="Tailwind CSS 4">
+		Styled with the latest Tailwind CSS 4 features, offering a sleek and modern aesthetic.
+	</Card>
+	<Card icon="laptop" title="Fully Responsive">
+		Every component is built to look great on any screen size, from mobile to desktop.
+	</Card>
+</CardGrid>

@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Select } from "bits-ui";
+	import type { Select } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getSelectContext } from "./select-context";
+	import { getSelectContext } from './select-context';
 
-export type SelectGroupHeadingProps = Select.GroupHeadingProps;
+	export type SelectGroupHeadingProps = Select.GroupHeadingProps;
 </script>
 
 <script lang="ts">

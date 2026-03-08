@@ -1,0 +1,128 @@
+---
+title: Dropdown Menu
+description: Displays a list of options for the user to pick from, triggered by a button.
+---
+
+import { DropdownMenu } from '@adn-ui/svelte';
+import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
+
+import DropdownMenuExample from '../../../components/DropdownMenuExample.svelte';
+
+The `DropdownMenu` component provides a list of actionable items or settings that users can interact with. It supports submenus, keyboard navigation, and checkbox/radio items. It is built on top of [Bits UI](https://bits-ui.com/docs/components/dropdown-menu).
+
+## Usage
+
+Import the `DropdownMenu` components to build your menu.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { DropdownMenu, Button } from "@adn-ui/svelte";
+</script>
+
+<DropdownMenu.Root>
+  <DropdownMenu.Trigger>
+    <Button variant="outline">Open Menu</Button>
+  </DropdownMenu.Trigger>
+  <DropdownMenu.Content>
+    <DropdownMenu.Group>
+      <DropdownMenu.GroupHeading>My Account</DropdownMenu.GroupHeading>
+      <DropdownMenu.Separator />
+      <DropdownMenu.Item>Profile</DropdownMenu.Item>
+      <DropdownMenu.Item>Settings</DropdownMenu.Item>
+    </DropdownMenu.Group>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Item>Log out</DropdownMenu.Item>
+  </DropdownMenu.Content>
+</DropdownMenu.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Basic Dropdown Menu
+
+A comprehensive dropdown menu with headings, separators, shortcuts, and submenus.
+
+<div class="not-prose mb-6 flex items-center justify-center rounded-lg border bg-surface p-12">
+	<DropdownMenuExample client:load />
+</div>
+
+```svelte
+<DropdownMenu.Root>
+	<DropdownMenu.Trigger>
+		<Button variant="outline">Open Menu</Button>
+	</DropdownMenu.Trigger>
+	<DropdownMenu.Content>
+		<!-- ... items, groups, submenus ... -->
+	</DropdownMenu.Content>
+</DropdownMenu.Root>
+```
+
+## API Reference
+
+### DropdownMenu.Root
+
+The root component that manages the menu state.
+
+### DropdownMenu.Trigger
+
+The element that opens the menu.
+
+### DropdownMenu.Content
+
+The container for the menu items.
+
+### DropdownMenu.Item
+
+A single item in the menu.
+
+### DropdownMenu.Group
+
+A container for grouping related menu items.
+
+### DropdownMenu.GroupHeading
+
+A label for a group of items.
+
+### DropdownMenu.Separator
+
+A horizontal line that visually separates items or groups.
+
+### DropdownMenu.Shortcut
+
+A visually styled container for keyboard shortcuts within a menu item.
+
+### DropdownMenu.Sub
+
+The root for a submenu.
+
+### DropdownMenu.SubTrigger
+
+The item that triggers the submenu.
+
+### DropdownMenu.SubContent
+
+The container for the submenu items.
+
+### DropdownMenu.CheckboxItem
+
+A menu item that can be toggled as a checkbox.
+
+### DropdownMenu.RadioGroup
+
+A container for a group of radio items.
+
+### DropdownMenu.RadioItem
+
+A menu item that behaves like a radio button within a `RadioGroup`.
+
+## Accessibility
+
+The `DropdownMenu` component follows the [WAI-ARIA Menu and Menubar Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/):
+
+- **Keyboard Support:** Full navigation with arrow keys, `Enter`, `Space`, `Esc`, `Home`, and `End`.
+- **Focus Management:** Focus is managed within the menu and restored to the trigger on close.
+- **ARIA Attributes:** Manages `role="menu"`, `role="menuitem"`, `aria-haspopup`, and `aria-expanded`.

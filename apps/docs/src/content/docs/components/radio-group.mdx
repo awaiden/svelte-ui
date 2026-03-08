@@ -1,0 +1,81 @@
+---
+title: Radio Group
+description: A set of checkable buttons—known as radio buttons—where no more than one button can be checked at a time.
+---
+
+import { RadioGroup } from '@adn-ui/svelte';
+import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
+
+import RadioGroupExample from '../../../components/RadioGroupExample.svelte';
+
+The `RadioGroup` component allows users to select a single option from a predefined set. It is built on top of [Bits UI](https://bits-ui.com/docs/components/radio-group).
+
+## Usage
+
+Import the `RadioGroup` components and use them to create a group of options.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { RadioGroup, Field } from "@adn-ui/svelte";
+</script>
+
+<RadioGroup.Root value="option-one">
+  <div class="flex items-center space-x-2">
+    <RadioGroup.Item value="option-one" id="option-one" />
+    <Field.Label for="option-one">Option One</Field.Label>
+  </div>
+  <div class="flex items-center space-x-2">
+    <RadioGroup.Item value="option-two" id="option-two" />
+    <Field.Label for="option-two">Option Two</Field.Label>
+  </div>
+</RadioGroup.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Basic Radio Group
+
+A simple group with two options.
+
+<div class="not-prose mb-6 flex items-center justify-center rounded-lg border bg-surface p-12">
+	<RadioGroupExample client:load />
+</div>
+
+```svelte
+<RadioGroup.Root value="option-one">
+	<!-- Items... -->
+</RadioGroup.Root>
+```
+
+## API Reference
+
+### RadioGroup.Root
+
+The container for the radio items.
+
+| Prop            | Type                      | Default     | Description                            |
+| :-------------- | :------------------------ | :---------- | :------------------------------------- |
+| `value`         | `string`                  | `undefined` | The value of the checked radio button. |
+| `onValueChange` | `(value: string) => void` | `undefined` | Callback fired when the value changes. |
+| `disabled`      | `boolean`                 | `false`     | Whether the entire group is disabled.  |
+
+### RadioGroup.Item
+
+A single radio button in the group.
+
+| Prop       | Type      | Default      | Description                           |
+| :--------- | :-------- | :----------- | :------------------------------------ |
+| `value`    | `string`  | **Required** | The value of the radio button.        |
+| `disabled` | `boolean` | `false`      | Whether the radio button is disabled. |
+
+## Accessibility
+
+The `RadioGroup` component follows the [WAI-ARIA Radio Group Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/radio/):
+
+- **Keyboard Support:** Navigate through options using arrow keys. Use `Space` to check an option.
+- **Focus Management:** Visual focus indicators are provided.
+- **ARIA Attributes:** Manages `role="radiogroup"`, `role="radio"`, and `aria-checked`.

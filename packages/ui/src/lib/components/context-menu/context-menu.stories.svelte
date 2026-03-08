@@ -1,15 +1,15 @@
 <script module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import { ContextMenu } from ".";
+	import { ContextMenu } from '.';
 
-const { Story } = defineMeta({
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Context Menu",
-});
+	const { Story } = defineMeta({
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Context Menu'
+	});
 </script>
 
 <Story name="Default">

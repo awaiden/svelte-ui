@@ -1,6 +1,6 @@
-import { createContext } from "svelte";
+import { createContext } from 'svelte';
 
-import type { tabsVariants } from "./tabs.variants";
+import type { tabsVariants } from './tabs.variants';
 
 interface TabsContext {
 	slots: ReturnType<typeof tabsVariants>;

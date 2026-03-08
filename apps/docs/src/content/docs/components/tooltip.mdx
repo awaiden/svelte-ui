@@ -1,0 +1,65 @@
+---
+title: Tooltip
+description: A popup that displays information related to an element when it receives keyboard focus or the mouse hovers over it.
+---
+
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+import TooltipExample from '../../../components/TooltipExample.svelte';
+
+The `Tooltip` component provides contextual information when a user interacts with an element.
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Tooltip, Button } from "@adn-ui/svelte";
+</script>
+
+<Tooltip.Provider>
+  <Tooltip.Root>
+    <Tooltip.Trigger asChild let:builder>
+      <Button variant="outline" builders={[builder]}>Hover Me</Button>
+    </Tooltip.Trigger>
+    <Tooltip.Content side="top">
+      <p>Add to library</p>
+    </Tooltip.Content>
+  </Tooltip.Root>
+</Tooltip.Provider>
+```
+  </TabItem>
+</Tabs>
+
+## Showcase
+
+<div class="not-prose mb-6 flex justify-center rounded-lg border bg-surface p-6">
+	<TooltipExample client:load />
+</div>
+
+## API Reference
+
+Built on top of [Bits UI Tooltip](https://bits-ui.com/docs/components/tooltip).
+
+### Tooltip.Root
+
+Controls the visibility of the tooltip.
+
+### Tooltip.Trigger
+
+The element that triggers the tooltip. Use `asChild` to wrap existing components.
+
+### Tooltip.Content
+
+The container for the tooltip content.
+
+### Tooltip.Provider
+
+Provides the global state for tooltips. Wraps the root of your application or a section of it.
+
+## Accessibility
+
+- Follows the [ARIA tooltip pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/).
+- Only triggered by focus or hover.
+- Does not contain interactive elements (use Popover for that).

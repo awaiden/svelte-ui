@@ -1,0 +1,49 @@
+---
+title: Link
+description: A stylized anchor tag for navigation.
+---
+
+import { Link } from '@adn-ui/svelte';
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+The `Link` component is a styled anchor element used for navigation or linking to external resources.
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Link } from "@adn-ui/svelte";
+</script>
+
+<Link href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
+  Svelte Documentation
+</Link>
+```
+  </TabItem>
+</Tabs>
+
+## Showcase
+
+<div class="not-prose mb-6 flex items-center gap-4 rounded-lg border bg-surface p-6">
+	<Link client:load href="#">
+		Regular Link
+	</Link>
+	<Link client:load href="https://github.com/withastro/starlight" target="_blank">
+		External Link
+	</Link>
+</div>
+
+## API Reference
+
+The `Link` component accepts all standard `<a>` attributes.
+
+| Prop    | Type     | Default     | Description                      |
+| :------ | :------- | :---------- | :------------------------------- |
+| `class` | `string` | `undefined` | Additional CSS classes to apply. |
+
+## Accessibility
+
+- The component uses the native `<a>` tag for proper link behavior and accessibility.
+- Ensure that links are descriptive and clear about their destination.

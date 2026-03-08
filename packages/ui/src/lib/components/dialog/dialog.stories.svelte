@@ -1,18 +1,18 @@
 <script module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import { Dialog } from ".";
-import { Button } from "../button";
-import { Input } from "../input";
-import { Label } from "../label";
+	import { Dialog } from '.';
+	import { Button } from '../button';
+	import { Input } from '../input';
+	import { Label } from '../label';
 
-const { Story } = defineMeta({
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Dialog",
-});
+	const { Story } = defineMeta({
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Dialog'
+	});
 </script>
 
 <Story name="Default">

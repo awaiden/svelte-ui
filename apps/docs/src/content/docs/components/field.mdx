@@ -1,0 +1,89 @@
+---
+title: Field
+description: A wrapper component that provides context and layout for form fields, including labels, descriptions, and error messages.
+---
+
+import { Field, Input } from '@adn-ui/svelte';
+import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
+
+import FieldExample from '../../../components/FieldExample.svelte';
+
+The `Field` component is designed to wrap form controls (like `Input`, `Textarea`, or `Select`) and associate them with a `Label`, `Description`, and `Error` message. It handles the necessary ARIA attributes for accessibility automatically.
+
+## Usage
+
+Use `Field.Root` to wrap your form control and its associated metadata.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Field, Input } from "@adn-ui/svelte";
+</script>
+
+<Field.Root>
+  <Field.Label>Email</Field.Label>
+  <Input type="email" placeholder="Email" />
+  <Field.Description>We'll never share your email.</Field.Description>
+</Field.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Field with Description and Error
+
+Demonstrating how to use `Field` to provide additional context or validation feedback.
+
+<div class="not-prose mb-6 flex items-center justify-center rounded-lg border bg-surface p-12">
+	<FieldExample client:load />
+</div>
+
+```svelte
+<Field.Root>
+	<Field.Label>Email</Field.Label>
+	<Input type="email" placeholder="Email" />
+	<Field.Description>We'll never share your email.</Field.Description>
+</Field.Root>
+
+<Field.Root>
+	<Field.Label>Username</Field.Label>
+	<Input type="text" placeholder="Username" />
+	<Field.Error>This username is already taken.</Field.Error>
+</Field.Root>
+```
+
+## API Reference
+
+### Field.Root
+
+The container for the field components. It provides context to its children.
+
+### Field.Label
+
+The label for the form field. It is automatically associated with the input.
+
+### Field.Description
+
+Provides additional information about the field. It is associated with the input via `aria-describedby`.
+
+### Field.Error
+
+Displays an error message for the field. It is also associated with the input via `aria-describedby` and sets `aria-invalid` on the input.
+
+### Field.Group
+
+A container for grouping the input with prefixes or suffixes.
+
+### Field.Prefix / Field.Suffix
+
+Used within `Field.Group` to add decorative or functional elements before or after the input.
+
+## Accessibility
+
+The `Field` component ensures that form controls are accessible:
+
+- **Label Association:** Automatically links the `Label` to the form control using `id` and `for`.
+- **Descriptive Text:** Correctly associates `Description` and `Error` messages with the control using `aria-describedby`.
+- **Error State:** When an `Error` is present, it can signal an invalid state to assistive technologies.

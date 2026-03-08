@@ -1,0 +1,48 @@
+---
+title: Slider
+description: An input where the user selects a value from a range.
+---
+
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+import SliderExample from '../../../components/SliderExample.svelte';
+
+The `Slider` component allows users to choose a value from a numerical range by moving an indicator along a track.
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Slider } from "@adn-ui/svelte";
+  let value = $state([50]);
+</script>
+
+<Slider.Root bind:value max={100} step={1} />
+```
+  </TabItem>
+</Tabs>
+
+## Showcase
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<SliderExample client:load />
+</div>
+
+## API Reference
+
+Built on top of [Bits UI Slider](https://bits-ui.com/docs/components/slider).
+
+| Prop       | Type       | Default | Description                         |
+| :--------- | :--------- | :------ | :---------------------------------- |
+| `value`    | `number[]` | `[0]`   | The current value(s) of the slider. |
+| `min`      | `number`   | `0`     | The minimum value.                  |
+| `max`      | `number`   | `100`   | The maximum value.                  |
+| `step`     | `number`   | `1`     | The granularity of each step.       |
+| `disabled` | `boolean`  | `false` | Whether the slider is interactive.  |
+
+## Accessibility
+
+- Follows the [ARIA slider pattern](https://www.w3.org/WAI/ARIA/apg/patterns/slider/).
+- Supports standard keyboard interactions (arrows, home, end, page up/down).

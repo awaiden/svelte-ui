@@ -1,13 +1,13 @@
 <script lang="ts" module>
-import type { Tooltip } from "bits-ui";
+	import type { Tooltip } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getTooltipContext } from "./tooltip-context";
+	import { getTooltipContext } from './tooltip-context';
 
-export interface TooltipContentProps extends Tooltip.ContentProps {
-	sideOffset?: number;
-}
+	export interface TooltipContentProps extends Tooltip.ContentProps {
+		sideOffset?: number;
+	}
 </script>
 
 <script lang="ts">

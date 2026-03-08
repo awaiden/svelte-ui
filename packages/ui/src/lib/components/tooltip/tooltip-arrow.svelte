@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Tooltip } from "bits-ui";
+	import type { Tooltip } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getTooltipContext } from "./tooltip-context";
+	import { getTooltipContext } from './tooltip-context';
 
-export type TooltipArrowProps = Tooltip.ArrowProps;
+	export type TooltipArrowProps = Tooltip.ArrowProps;
 </script>
 
 <script lang="ts">

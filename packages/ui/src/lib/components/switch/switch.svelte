@@ -1,17 +1,22 @@
 <script lang="ts" module>
-import type { SwitchRootProps as SwitchPrimitiveRootProps } from "bits-ui";
-import { cn } from "tailwind-variants";
+	import type { SwitchRootProps as SwitchPrimitiveRootProps } from 'bits-ui';
 
-import { setSwitchContext } from "./switch-context";
-import { switchVariants, type SwitchVariantType } from "./switch.variants";
+	import { Switch as SwitchPrimitive } from 'bits-ui';
+	import { cn } from 'tailwind-variants';
 
-export type SwitchRootProps = SwitchPrimitiveRootProps & SwitchVariantType;
+	import { setSwitchContext } from './switch-context';
+	import { switchVariants, type SwitchVariantType } from './switch.variants';
+
+	export type SwitchRootProps = SwitchPrimitiveRootProps & SwitchVariantType;
 </script>
 
 <script lang="ts">
-	import { Switch as SwitchPrimitive } from 'bits-ui';
-
-	let { class: className, ...rest }: SwitchRootProps = $props();
+	let {
+		checked = $bindable(),
+		children: userChildren,
+		class: className,
+		...rest
+	}: SwitchRootProps = $props();
 
 	let slots = $derived(switchVariants());
 
@@ -22,4 +27,10 @@ export type SwitchRootProps = SwitchPrimitiveRootProps & SwitchVariantType;
 	});
 </script>
 
-<SwitchPrimitive.Root class={cn(slots.root(), className)} {...rest} />
+<SwitchPrimitive.Root class={cn(slots.root(), className)} {...rest}>
+	{#snippet children(args)}
+		{#if userChildren}
+			{@render userChildren(args)}
+		{/if}
+	{/snippet}
+</SwitchPrimitive.Root>

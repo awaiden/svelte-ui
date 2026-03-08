@@ -1,0 +1,53 @@
+---
+title: Showcase
+description: A gallery of Svelte UI components in action.
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+import AccordionExample from '../components/AccordionExample.svelte';
+import CardExample from '../components/CardExample.svelte';
+import DialogExample from '../components/DialogExample.svelte';
+import DropdownMenuExample from '../components/DropdownMenuExample.svelte';
+import TabsExample from '../components/TabsExample.svelte';
+
+Explore the visual style and interactive capabilities of Svelte UI components.
+
+## Interactive Previews
+
+<CardGrid>
+	<Card title="Accordion">
+		<div class="not-prose">
+			<AccordionExample client:load />
+		</div>
+	</Card>
+	<Card title="Tabs">
+		<div class="not-prose">
+			<TabsExample client:load />
+		</div>
+	</Card>
+	<Card title="Dropdown Menu">
+		<div class="not-prose">
+			<DropdownMenuExample client:load />
+		</div>
+	</Card>
+	<Card title="Dialog">
+		<div class="not-prose">
+			<DialogExample client:load />
+		</div>
+	</Card>
+</CardGrid>
+
+## Layout Components
+
+<Card title="Cards">
+	<div class="not-prose">
+		<CardExample client:load />
+	</div>
+</Card>
+
+## More Examples
+
+This showcase is just a starting point. Every component in our library has its own dedicated documentation page with detailed examples and API references.
+
+Check out the [Components](/components/button/) section to see the full list.

@@ -1,0 +1,47 @@
+---
+title: Surface
+description: A container component for grouping related content.
+---
+
+import { Surface } from '@adn-ui/svelte';
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+The `Surface` component is a basic container for content, providing consistent background and padding. It is often used as a building block for more complex layouts.
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Surface } from "@adn-ui/svelte";
+</script>
+
+<Surface class="p-6 border">
+  <p>Content inside the surface.</p>
+</Surface>
+```
+  </TabItem>
+</Tabs>
+
+## Showcase
+
+<div class="not-prose mb-6 flex flex-col gap-4 rounded-lg border bg-surface p-6">
+	<Surface class="border border-dashed p-4 text-center" client:load>
+		Basic Surface Container
+	</Surface>
+	<Surface class="rounded-xl border bg-muted p-8" client:load>
+		Customized Surface
+	</Surface>
+</div>
+
+## API Reference
+
+| Prop    | Type     | Default     | Description                                   |
+| :------ | :------- | :---------- | :-------------------------------------------- |
+| `class` | `string` | `undefined` | Additional classes to apply to the container. |
+
+## Accessibility
+
+- The `Surface` component is a generic `div` and does not have specific accessibility features beyond what is provided by the content it contains.
+- Use semantic HTML tags if necessary by passing them through the `class` or using a more specific component.

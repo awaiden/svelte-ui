@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { ContextMenu } from "bits-ui";
+	import type { ContextMenu } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getContextMenuContext } from "./context-menu-context";
+	import { getContextMenuContext } from './context-menu-context';
 
-export type ContextMenuContentProps = ContextMenu.ContentProps;
+	export type ContextMenuContentProps = ContextMenu.ContentProps;
 </script>
 
 <script lang="ts">

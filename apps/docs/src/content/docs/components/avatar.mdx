@@ -1,0 +1,80 @@
+---
+title: Avatar
+description: An image element with a fallback for representing the user.
+---
+
+import { Avatar } from '@adn-ui/svelte';
+import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
+
+import AvatarExample from '../../../components/AvatarExample.svelte';
+
+The `Avatar` component is used to represent a user or entity. It supports an image with an automatic fallback when the image fails to load or is not provided. It is built on top of [Bits UI](https://bits-ui.com/docs/components/avatar).
+
+## Usage
+
+To use the `Avatar`, import the root component and its sub-components from `@adn-ui/svelte`.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Avatar } from "@adn-ui/svelte";
+</script>
+
+<Avatar.Root>
+  <Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
+  <Avatar.Fallback>CN</Avatar.Fallback>
+</Avatar.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Sizes
+
+The `Avatar` supports several sizes: `xs`, `sm`, `md` (default), `lg`, and `xl`.
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<AvatarExample client:load />
+</div>
+
+```svelte
+<Avatar.Root size="xs">...</Avatar.Root>
+<Avatar.Root size="sm">...</Avatar.Root>
+<Avatar.Root size="md">...</Avatar.Root>
+<Avatar.Root size="lg">...</Avatar.Root>
+<Avatar.Root size="xl">...</Avatar.Root>
+```
+
+## API Reference
+
+### Avatar.Root
+
+The main container for the avatar.
+
+| Prop      | Type                                   | Default     | Description                                             |
+| :-------- | :------------------------------------- | :---------- | :------------------------------------------------------ |
+| `size`    | `"xs" \| "sm" \| "md" \| "lg" \| "xl"` | `"md"`      | The size of the avatar.                                 |
+| `delayMs` | `number`                               | `undefined` | The delay in milliseconds before the fallback is shown. |
+
+### Avatar.Image
+
+The image to be displayed.
+
+| Prop  | Type     | Default     | Description                         |
+| :---- | :------- | :---------- | :---------------------------------- |
+| `src` | `string` | `undefined` | The source URL of the image.        |
+| `alt` | `string` | `undefined` | The alternative text for the image. |
+
+### Avatar.Fallback
+
+The fallback content to be displayed when the image is loading or fails to load.
+
+## Accessibility
+
+The `Avatar` component ensures that an alternative text or fallback is always provided:
+
+- **Image Alt:** Always provide an `alt` prop to `Avatar.Image`.
+- **Fallback Content:** The `Avatar.Fallback` can contain text, initials, or an icon.
+- **ARIA Attributes:** Automatically manages the visibility of the image and fallback for screen readers.

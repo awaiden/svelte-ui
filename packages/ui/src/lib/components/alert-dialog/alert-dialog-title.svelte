@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { AlertDialog } from "bits-ui";
+	import type { AlertDialog } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getAlertDialogContext } from "./alert-dialog-context";
+	import { getAlertDialogContext } from './alert-dialog-context';
 
-export type AlertDialogTitleProps = AlertDialog.TitleProps;
+	export type AlertDialogTitleProps = AlertDialog.TitleProps;
 </script>
 
 <script lang="ts">

@@ -1,12 +1,12 @@
 <script lang="ts" module>
-import type { Avatar } from "bits-ui";
+	import type { Avatar } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { setAvatarContext } from "./avatar-context";
-import { avatarVariants, type AvatarVariantType } from "./avatar.variants";
+	import { setAvatarContext } from './avatar-context';
+	import { avatarVariants, type AvatarVariantType } from './avatar.variants';
 
-export type AvatarRootProps = Avatar.RootProps & AvatarVariantType;
+	export type AvatarRootProps = Avatar.RootProps & AvatarVariantType;
 </script>
 
 <script lang="ts">

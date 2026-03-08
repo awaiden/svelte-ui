@@ -1,17 +1,17 @@
 <script module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import { Meter } from ".";
-import { Label } from "../label";
+	import { Meter } from '.';
+	import { Label } from '../label';
 
-const { Story } = defineMeta({
-	component: Meter,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Meter",
-});
+	const { Story } = defineMeta({
+		component: Meter,
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Meter'
+	});
 </script>
 
 <Story name="Default">

@@ -1,15 +1,15 @@
 <script lang="ts" module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import Surface from "./surface.svelte";
+	import Surface from './surface.svelte';
 
-const { Story } = defineMeta({
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Surface",
-});
+	const { Story } = defineMeta({
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Surface'
+	});
 </script>
 
 <Story name="Default">

@@ -1,10 +1,10 @@
 <script lang="ts" module>
-import type { Dialog } from "bits-ui";
+	import type { Dialog } from 'bits-ui';
 
-import { setDialogContext } from "./dialog-context";
-import { dialogVariants, type DialogVariantType } from "./dialog.variants";
+	import { setDialogContext } from './dialog-context';
+	import { dialogVariants, type DialogVariantType } from './dialog.variants';
 
-export type DialogRootProps = Dialog.RootProps & DialogVariantType;
+	export type DialogRootProps = Dialog.RootProps & DialogVariantType;
 </script>
 
 <script lang="ts">

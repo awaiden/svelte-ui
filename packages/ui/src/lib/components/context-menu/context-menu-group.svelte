@@ -1,7 +1,7 @@
 <script lang="ts" module>
-import type { ContextMenu } from "bits-ui";
+	import type { ContextMenu } from 'bits-ui';
 
-export type ContextMenuGroupProps = ContextMenu.GroupProps;
+	export type ContextMenuGroupProps = ContextMenu.GroupProps;
 </script>
 
 <script lang="ts">

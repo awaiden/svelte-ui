@@ -1,0 +1,71 @@
+---
+title: Card
+description: A flexible and extensible content container.
+---
+
+import { Card } from '@adn-ui/svelte';
+import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
+
+import CardExample from '../../../components/CardExample.svelte';
+
+The `Card` component is used to group related information into a single container. It is highly flexible and can contain any type of content.
+
+## Usage
+
+To use the `Card`, import the root component and its sub-components from `@adn-ui/svelte`.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Card, Button } from "@adn-ui/svelte";
+</script>
+
+<Card.Root>
+  <Card.Header>
+    <Card.Title>Card Title</Card.Title>
+    <Card.Description>Card Description</Card.Description>
+  </Card.Header>
+  <Card.Content>
+    <p>Card Content</p>
+  </Card.Content>
+</Card.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Example
+
+<div class="not-prose mb-6 flex justify-center rounded-lg border bg-surface p-6">
+	<CardExample client:load />
+</div>
+
+## API Reference
+
+### Card.Root
+
+The main container for the card.
+
+### Card.Header
+
+The header section of the card, usually contains the title and description.
+
+### Card.Title
+
+The title of the card.
+
+### Card.Description
+
+The description of the card.
+
+### Card.Content
+
+The main content area of the card.
+
+## Accessibility
+
+The `Card` component is a generic container and doesn't have specific ARIA roles by default. However, you should ensure that the content within the card follows accessibility best practices:
+
+- **Headings:** Use appropriate heading levels for the `Card.Title`.
+- **Contrast:** Ensure sufficient color contrast for all text elements.
+- **Interactive Elements:** Any buttons or links within the card should be keyboard accessible.

@@ -1,0 +1,61 @@
+---
+title: Select
+description: Displays a list of options for the user to pick from—triggered by a button.
+---
+
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+import SelectExample from '../../../components/SelectExample.svelte';
+
+The `Select` component allows users to choose a single option from a list of items.
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Select } from "@adn-ui/svelte";
+</script>
+
+<Select.Root type="single">
+  <Select.Trigger>Select a fruit</Select.Trigger>
+  <Select.Content>
+    <Select.Item value="apple" label="Apple">Apple</Select.Item>
+    <Select.Item value="banana" label="Banana">Banana</Select.Item>
+  </Select.Content>
+</Select.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Showcase
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<SelectExample client:load />
+</div>
+
+## API Reference
+
+Built on top of [Bits UI Select](https://bits-ui.com/docs/components/select).
+
+### Select.Root
+
+Supports `type="single"` or `type="multiple"`.
+
+### Select.Trigger
+
+The button that opens the dropdown.
+
+### Select.Content
+
+The container for the selectable items.
+
+### Select.Item
+
+A single selectable option. Requires `value` and `label`.
+
+## Accessibility
+
+- Follows the [ARIA Listbox pattern](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/).
+- Supports keyboard navigation (arrows, enter, space, escape).

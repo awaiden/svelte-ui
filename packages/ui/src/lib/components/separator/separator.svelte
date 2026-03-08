@@ -1,14 +1,11 @@
 <script lang="ts" module>
-import type { SeparatorRootProps } from "bits-ui";
+	import type { SeparatorRootProps } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import {
-	separatorVariants,
-	type SeparatorVariantType,
-} from "./separator.variants";
+	import { separatorVariants, type SeparatorVariantType } from './separator.variants';
 
-export type SeparatorProps = SeparatorRootProps & SeparatorVariantType;
+	export type SeparatorProps = SeparatorRootProps & SeparatorVariantType;
 </script>
 
 <script lang="ts">

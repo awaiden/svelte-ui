@@ -1,0 +1,63 @@
+---
+title: Tabs
+description: A set of layered sections of content, known as tab panels, that are displayed one at a time.
+---
+
+import { Tabs as StarlightTabs, TabItem } from '@astrojs/starlight/components';
+
+import TabsExample from '../../../components/TabsExample.svelte';
+
+The `Tabs` component allows users to switch between different views within the same context.
+
+## Usage
+
+<StarlightTabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Tabs } from "@adn-ui/svelte";
+</script>
+
+<Tabs.Root value="account">
+  <Tabs.List>
+    <Tabs.Trigger value="account">Account</Tabs.Trigger>
+    <Tabs.Trigger value="password">Password</Tabs.Trigger>
+  </Tabs.List>
+  <Tabs.Content value="account">Account content...</Tabs.Content>
+  <Tabs.Content value="password">Password content...</Tabs.Content>
+</Tabs.Root>
+```
+  </TabItem>
+</StarlightTabs>
+
+## Showcase
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<TabsExample client:load />
+</div>
+
+## API Reference
+
+Built on top of [Bits UI Tabs](https://bits-ui.com/docs/components/tabs).
+
+### Tabs.Root
+
+The main container. Controls the active tab via the `value` prop.
+
+### Tabs.List
+
+The container for the triggers.
+
+### Tabs.Trigger
+
+The button that switches the active tab.
+
+### Tabs.Content
+
+The panel associated with a trigger.
+
+## Accessibility
+
+- Follows the [ARIA tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/).
+- Supports keyboard navigation (arrows, home, end).
+- Automatically manages `aria-selected` and `aria-controls`.

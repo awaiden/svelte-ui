@@ -1,14 +1,14 @@
 <script lang="ts" module>
-import type { ContextMenu } from "bits-ui";
-import type { Snippet } from "svelte";
+	import type { ContextMenu } from 'bits-ui';
+	import type { Snippet } from 'svelte';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getContextMenuContext } from "./context-menu-context";
+	import { getContextMenuContext } from './context-menu-context';
 
-export type ContextMenuRadioItemProps = {
-	children?: Snippet;
-} & Omit<ContextMenu.RadioItemProps, "children">;
+	export type ContextMenuRadioItemProps = {
+		children?: Snippet;
+	} & Omit<ContextMenu.RadioItemProps, 'children'>;
 </script>
 
 <script lang="ts">
@@ -21,12 +21,12 @@ export type ContextMenuRadioItemProps = {
 </script>
 
 <ContextMenuPrimitive.RadioItem class={cn(slots.radioItem(), className)} {...rest}>
-	{#snippet children({ checked })}
+	{#snippet children(args)}
 		<span class="absolute left-2 flex size-3.5 items-center justify-center">
-			{#if checked}
+			{#if args?.checked}
 				<LucideCircle class="size-2 fill-current" />
 			{/if}
 		</span>
-		{@render userChildren?.()}
+		{@render userChildren?.(args || ({ props: {} } as any))}
 	{/snippet}
 </ContextMenuPrimitive.RadioItem>

@@ -1,0 +1,40 @@
+---
+title: Design Principles
+description: The core philosophies and standards behind Svelte UI.
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+Svelte UI is built on a set of core principles that guide our development and ensure a consistent experience for developers and users alike.
+
+## 1. Svelte 5 First
+
+We believe that Svelte 5 is the future of web development. Every component in this library is built from the ground up using:
+
+- **Runes:** `$props`, `$state`, and `$derived` for clean, explicit reactivity.
+- **Snippets:** For flexible and type-safe component composition.
+
+## 2. Accessibility without Compromise
+
+Accessibility is not an afterthought; it's a foundation. By using **Bits UI** as our headless core, we inherit years of work on keyboard navigation, ARIA attributes, and focus management. Our job is to provide the beautiful "skin" while maintaining the structural integrity of accessible patterns.
+
+## 3. Utility-First Styling
+
+We embrace **Tailwind CSS 4** for styling. This allows for:
+
+- **Consistency:** Using a shared design system of spacing, colors, and typography.
+- **Performance:** Minimal CSS footprint by leveraging utility classes.
+- **Customizability:** Easy overrides through standard Tailwind classes.
+
+## 4. Composition Over Configuration
+
+Instead of "God components" with dozens of props, we favor small, atomic components that can be composed together. This gives you more control over the final output and makes the library easier to learn and use.
+
+<CardGrid>
+	<Card icon="approve-check" title="Predictable Behavior">
+		Components should behave exactly as a developer expects based on standard HTML elements.
+	</Card>
+	<Card icon="pencil" title="Developer Experience">
+		Clear types, helpful documentation, and sensible defaults are priorities.
+	</Card>
+</CardGrid>

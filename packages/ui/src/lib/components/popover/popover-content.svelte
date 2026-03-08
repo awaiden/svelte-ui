@@ -1,13 +1,13 @@
 <script lang="ts" module>
-import type { Popover } from "bits-ui";
+	import type { Popover } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getPopoverContext } from "./popover-context";
+	import { getPopoverContext } from './popover-context';
 
-export interface PopoverContentProps extends Popover.ContentProps {
-	sideOffset?: number;
-}
+	export interface PopoverContentProps extends Popover.ContentProps {
+		sideOffset?: number;
+	}
 </script>
 
 <script lang="ts">

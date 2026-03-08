@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Collapsible } from "bits-ui";
+	import type { Collapsible } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getCollapsibleContext } from "./collapsible-context";
+	import { getCollapsibleContext } from './collapsible-context';
 
-export type CollapsibleContentProps = Collapsible.ContentProps;
+	export type CollapsibleContentProps = Collapsible.ContentProps;
 </script>
 
 <script lang="ts">

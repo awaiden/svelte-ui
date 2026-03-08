@@ -1,0 +1,97 @@
+---
+title: Context Menu
+description: Displays a menu located at the pointer, triggered by a right-click or long-press.
+---
+
+import { ContextMenu } from '@adn-ui/svelte';
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+import ContextMenuExample from '../../../components/ContextMenuExample.svelte';
+
+The `ContextMenu` component provides a secondary set of actions relevant to a specific target. It is built on top of [Bits UI](https://bits-ui.com/docs/components/context-menu).
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { ContextMenu } from "@adn-ui/svelte";
+</script>
+
+<ContextMenu.Root>
+  <ContextMenu.Trigger>Right click here</ContextMenu.Trigger>
+  <ContextMenu.Content>
+    <ContextMenu.Item>Profile</ContextMenu.Item>
+    <ContextMenu.Item>Billing</ContextMenu.Item>
+    <ContextMenu.Item>Settings</ContextMenu.Item>
+  </ContextMenu.Content>
+</ContextMenu.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Basic
+
+<div class="not-prose mb-6 flex justify-center rounded-lg border bg-surface p-6">
+	<ContextMenuExample client:load />
+</div>
+
+## API Reference
+
+### ContextMenu.Root
+
+The main container for the context menu.
+
+### ContextMenu.Trigger
+
+The element that triggers the context menu on right-click.
+
+### ContextMenu.Content
+
+The container for the menu items.
+
+### ContextMenu.Item
+
+A single item in the menu.
+
+### ContextMenu.CheckboxItem
+
+A menu item that can be toggled on and off.
+
+### ContextMenu.RadioGroup
+
+A container for grouping radio items.
+
+### ContextMenu.RadioItem
+
+A menu item that behaves like a radio button.
+
+### ContextMenu.Sub
+
+A container for a sub-menu.
+
+### ContextMenu.SubTrigger
+
+The item that triggers the sub-menu.
+
+### ContextMenu.SubContent
+
+The container for the sub-menu items.
+
+### ContextMenu.Separator
+
+A visual divider between menu items.
+
+### ContextMenu.Shortcut
+
+A label for displaying a keyboard shortcut.
+
+## Accessibility
+
+The `ContextMenu` component follows the [WAI-ARIA Menu Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/menu/):
+
+- **Keyboard Support:** Supports arrow keys to navigate, `Enter` to select, and `Escape` to close.
+- **ARIA Attributes:** Automatically manages `aria-haspopup`, `aria-expanded`, and `aria-controls`.

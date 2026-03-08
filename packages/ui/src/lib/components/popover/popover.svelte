@@ -1,10 +1,10 @@
 <script lang="ts" module>
-import type { Popover } from "bits-ui";
+	import type { Popover } from 'bits-ui';
 
-import { setPopoverContext } from "./popover-context";
-import { popoverVariants, type PopoverVariantType } from "./popover.variants";
+	import { setPopoverContext } from './popover-context';
+	import { popoverVariants, type PopoverVariantType } from './popover.variants';
 
-export type PopoverRootProps = Popover.RootProps & PopoverVariantType;
+	export type PopoverRootProps = Popover.RootProps & PopoverVariantType;
 </script>
 
 <script lang="ts">

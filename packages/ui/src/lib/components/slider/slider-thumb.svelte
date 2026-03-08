@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Slider } from "bits-ui";
+	import type { Slider } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getSliderContext } from "./slider-context";
+	import { getSliderContext } from './slider-context';
 
-export type SliderThumbProps = Slider.ThumbProps;
+	export type SliderThumbProps = Slider.ThumbProps;
 </script>
 
 <script lang="ts">

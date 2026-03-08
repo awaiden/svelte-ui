@@ -1,16 +1,16 @@
 <script lang="ts" module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import Label from "./label.svelte";
+	import Label from './label.svelte';
 
-const { Story } = defineMeta({
-	component: Label,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Label",
-});
+	const { Story } = defineMeta({
+		component: Label,
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Label'
+	});
 </script>
 
 <Story name="Default">

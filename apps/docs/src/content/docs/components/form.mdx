@@ -1,0 +1,83 @@
+---
+title: Form
+description: A container for form elements that provides consistent spacing and layout.
+---
+
+import { Button, Field, Form, Input } from '@adn-ui/svelte';
+import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
+
+The `Form` component is a simple wrapper for grouping form fields together with consistent spacing and layout.
+
+## Usage
+
+Use the `Form` component to wrap multiple `Field` or form control components.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Button, Field, Form, Input } from "@adn-ui/svelte";
+</script>
+
+<Form onsubmit={(e) => { e.preventDefault(); console.log('Form submitted'); }}>
+  <Field.Root>
+    <Field.Label>Email</Field.Label>
+    <Input type="email" placeholder="Email" />
+  </Field.Root>
+
+<Field.Root>
+	<Field.Label>Password</Field.Label>
+	<Input type="password" placeholder="Password" />
+</Field.Root>
+
+  <Button type="submit">Log In</Button>
+</Form>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Complete Form
+
+A demonstration of a complete form using `Form`, `Field`, and `Input`.
+
+<div class="not-prose mb-6 flex flex-col items-center justify-center rounded-lg border bg-surface p-12">
+	<Form class="w-full max-w-sm space-y-4">
+		<Field.Root>
+			<Field.Label>Full Name</Field.Label>
+			<Input placeholder="John Doe" />
+		</Field.Root>
+		<Field.Root>
+			<Field.Label>Email</Field.Label>
+			<Input placeholder="john@example.com" type="email" />
+		</Field.Root>
+		<Button class="w-full">Submit</Button>
+	</Form>
+</div>
+
+```svelte
+<Form class="space-y-4">
+	<Field.Root>
+		<Field.Label>Full Name</Field.Label>
+		<Input placeholder="John Doe" />
+	</Field.Root>
+	<Field.Root>
+		<Field.Label>Email</Field.Label>
+		<Input type="email" placeholder="john@example.com" />
+	</Field.Root>
+	<Button class="w-full">Submit</Button>
+</Form>
+```
+
+## API Reference
+
+### Props
+
+| Prop    | Type     | Default     | Description                                  |
+| :------ | :------- | :---------- | :------------------------------------------- |
+| `class` | `string` | `undefined` | Additional CSS classes to apply to the form. |
+
+## Accessibility
+
+The `Form` component renders as a `<div>` by default but can be used alongside standard `<form>` attributes. Ensure that you use appropriate labels and ARIA attributes within your form fields for maximum accessibility.

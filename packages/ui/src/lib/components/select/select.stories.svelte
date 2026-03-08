@@ -1,39 +1,39 @@
 <script lang="ts" module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import { Separator } from "../separator";
-import { Select } from "./index";
+	import { Separator } from '../separator';
+	import { Select } from './index';
 
-const { Story } = defineMeta({
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Select",
-});
+	const { Story } = defineMeta({
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Select'
+	});
 
-const fruits = [
-	{ label: "Apple", value: "apple" },
-	{ label: "Banana", value: "banana" },
-	{ label: "Blueberry", value: "blueberry" },
-	{ label: "Grapes", value: "grapes" },
-	{ label: "Pineapple", value: "pineapple" },
-];
+	const fruits = [
+		{ label: 'Apple', value: 'apple' },
+		{ label: 'Banana', value: 'banana' },
+		{ label: 'Blueberry', value: 'blueberry' },
+		{ label: 'Grapes', value: 'grapes' },
+		{ label: 'Pineapple', value: 'pineapple' }
+	];
 
-const vegetables = [
-	{ label: "Aubergine", value: "aubergine" },
-	{ label: "Broccoli", value: "broccoli" },
-	{ disabled: true, label: "Carrot", value: "carrot" },
-	{ label: "Courgette", value: "courgette" },
-	{ label: "Leek", value: "leek" },
-];
+	const vegetables = [
+		{ label: 'Aubergine', value: 'aubergine' },
+		{ label: 'Broccoli', value: 'broccoli' },
+		{ disabled: true, label: 'Carrot', value: 'carrot' },
+		{ label: 'Courgette', value: 'courgette' },
+		{ label: 'Leek', value: 'leek' }
+	];
 
-const items = [...fruits, ...vegetables];
+	const items = [...fruits, ...vegetables];
 
-let value = $state<string>("");
-const selectedLabel = $derived(
-	value ? items.find((item) => item.value === value)?.label : "Select an item",
-);
+	let value = $state<string>('');
+	const selectedLabel = $derived(
+		value ? items.find((item) => item.value === value)?.label : 'Select an item'
+	);
 </script>
 
 <Story name="Default">

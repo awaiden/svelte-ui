@@ -1,13 +1,9 @@
-<script lang="ts" module>
-import type { Tooltip } from "bits-ui";
-
-export type TooltipTriggerProps = Tooltip.TriggerProps;
-</script>
-
 <script lang="ts">
-	import { Tooltip as TooltipPrimitive } from 'bits-ui';
+	import type { Snippet } from 'svelte'; // Snippet tipini import et
 
-	let { children, ...rest }: TooltipTriggerProps = $props();
+	import { Tooltip as TooltipPrimitive, type TooltipTriggerProps } from 'bits-ui';
+
+	let { children, ...rest }: { children?: Snippet } & TooltipTriggerProps = $props();
 </script>
 
 <TooltipPrimitive.Trigger {...rest}>

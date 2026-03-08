@@ -1,7 +1,7 @@
 <script lang="ts" module>
-import type { DropdownMenu } from "bits-ui";
+	import type { DropdownMenu } from 'bits-ui';
 
-export type DropdownMenuSubProps = DropdownMenu.SubProps;
+	export type DropdownMenuSubProps = DropdownMenu.SubProps;
 </script>
 
 <script lang="ts">

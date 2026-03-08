@@ -1,8 +1,5 @@
-import Root from "./checkbox.svelte";
+import Root from './checkbox.svelte';
 
-export {
-	checkboxVariants,
-	type CheckboxVariantType,
-} from "./checkbox.variants";
+export { checkboxVariants, type CheckboxVariantType } from './checkbox.variants';
 
 export const Checkbox = Root;

@@ -1,25 +1,25 @@
 <script module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import { Slider } from "./index";
+	import { Slider } from './index';
 
-const { Story } = defineMeta({
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Slider",
-});
+	const { Story } = defineMeta({
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Slider'
+	});
 </script>
 
 <Story name="Default">
 	<div class="w-64">
 		<Slider.Root type="single" value={50}>
-			{#snippet children({ thumbs })}
+			{#snippet children(args)}
 				<span class="bg-muted relative h-2 w-full grow cursor-pointer overflow-hidden rounded-full">
 					<Slider.Range />
 				</span>
-				{#each thumbs as index (index)}
+				{#each args?.thumbs ?? [] as index (index)}
 					<Slider.Thumb {index} />
 				{/each}
 			{/snippet}
@@ -30,11 +30,11 @@ const { Story } = defineMeta({
 <Story name="Range">
 	<div class="w-64">
 		<Slider.Root type="multiple" value={[25, 75]}>
-			{#snippet children({ thumbs })}
+			{#snippet children(args)}
 				<span class="bg-muted relative h-2 w-full grow cursor-pointer overflow-hidden rounded-full">
 					<Slider.Range />
 				</span>
-				{#each thumbs as index (index)}
+				{#each args?.thumbs ?? [] as index (index)}
 					<Slider.Thumb {index} />
 				{/each}
 			{/snippet}
@@ -45,14 +45,14 @@ const { Story } = defineMeta({
 <Story name="With Ticks">
 	<div class="w-64">
 		<Slider.Root type="single" min={0} max={10} step={1} value={5}>
-			{#snippet children({ thumbs, tickItems })}
+			{#snippet children(args)}
 				<span class="bg-muted relative h-2 w-full grow cursor-pointer overflow-hidden rounded-full">
 					<Slider.Range />
 				</span>
-				{#each thumbs as index (index)}
+				{#each args?.thumbs ?? [] as index (index)}
 					<Slider.Thumb {index} />
 				{/each}
-				{#each tickItems as { index } (index)}
+				{#each args?.tickItems ?? [] as { index } (index)}
 					<Slider.Tick {index} />
 				{/each}
 			{/snippet}
@@ -63,11 +63,11 @@ const { Story } = defineMeta({
 <Story name="Disabled">
 	<div class="w-64">
 		<Slider.Root type="single" value={40} disabled>
-			{#snippet children({ thumbs })}
+			{#snippet children(args)}
 				<span class="bg-muted relative h-2 w-full grow cursor-pointer overflow-hidden rounded-full">
 					<Slider.Range />
 				</span>
-				{#each thumbs as index (index)}
+				{#each args?.thumbs ?? [] as index (index)}
 					<Slider.Thumb {index} />
 				{/each}
 			{/snippet}

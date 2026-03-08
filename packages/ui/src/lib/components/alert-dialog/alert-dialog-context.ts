@@ -1,10 +1,24 @@
-import { createContext } from "svelte";
+import { createContext } from 'svelte';
 
-import type { alertDialogVariants } from "./alert-dialog.variants";
+import { alertDialogVariants } from './alert-dialog.variants';
 
 interface AlertDialogContext {
 	slots: ReturnType<typeof alertDialogVariants>;
 }
 
-export const [getAlertDialogContext, setAlertDialogContext] =
+const [getOriginalAlertDialogContext, setOriginalAlertDialogContext] =
 	createContext<AlertDialogContext>();
+
+export const getAlertDialogContext = () => {
+	try {
+		return getOriginalAlertDialogContext();
+	} catch {
+		return {
+			get slots() {
+				return alertDialogVariants();
+			}
+		};
+	}
+};
+
+export const setAlertDialogContext = setOriginalAlertDialogContext;

@@ -1,7 +1,7 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv, type VariantProps } from 'tailwind-variants';
 
 export const textareaVariants = tv({
-	base: "textarea",
+	base: 'textarea'
 });
 
 export type TextareaVariantType = VariantProps<typeof textareaVariants>;

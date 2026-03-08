@@ -1,22 +1,22 @@
 <script module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
-import { LucideThumbsUp } from "lucide-svelte";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
+	import { LucideThumbsUp } from 'lucide-svelte';
 
-import Button from "./button.svelte";
+	import Button from './button.svelte';
 
-const { Story } = defineMeta({
-	args: {
-		disabled: false,
-		size: "md",
-		variant: "primary",
-	},
-	component: Button,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Button",
-});
+	const { Story } = defineMeta({
+		args: {
+			disabled: false,
+			size: 'md',
+			variant: 'primary'
+		},
+		component: Button,
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Button'
+	});
 </script>
 
 <Story name="Default">Hello world</Story>

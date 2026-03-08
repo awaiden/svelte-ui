@@ -1,0 +1,101 @@
+---
+title: Alert Dialog
+description: A modal dialog that interrupts the user with important content and expects a response.
+---
+
+import { AlertDialog } from '@adn-ui/svelte';
+import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
+
+import AlertDialogExample from '../../../components/AlertDialogExample.svelte';
+
+The `AlertDialog` component is used to display a message that requires a user's confirmation or action. It is built on top of [Bits UI](https://bits-ui.com/docs/components/alert-dialog) and is highly accessible.
+
+## Usage
+
+To use the `AlertDialog`, import the root component and its sub-components from `@adn-ui/svelte`.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { AlertDialog, Button } from "@adn-ui/svelte";
+</script>
+
+<AlertDialog.Root>
+  <AlertDialog.Trigger>
+    <Button variant="outline">Open Dialog</Button>
+  </AlertDialog.Trigger>
+  <AlertDialog.Content>
+    <AlertDialog.Header>
+      <AlertDialog.Title>Are you absolutely sure?</AlertDialog.Title>
+      <AlertDialog.Description>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </AlertDialog.Description>
+    </AlertDialog.Header>
+    <AlertDialog.Footer>
+      <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
+      <AlertDialog.Action>Continue</AlertDialog.Action>
+    </AlertDialog.Footer>
+  </AlertDialog.Content>
+</AlertDialog.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Example
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<AlertDialogExample client:load />
+</div>
+
+## API Reference
+
+### AlertDialog.Root
+
+The main container for the alert dialog.
+
+| Prop           | Type                      | Default     | Description                               |
+| :------------- | :------------------------ | :---------- | :---------------------------------------- |
+| `open`         | `boolean`                 | `false`     | Whether the dialog is open.               |
+| `onOpenChange` | `(open: boolean) => void` | `undefined` | Callback for when the open state changes. |
+
+### AlertDialog.Trigger
+
+The button that opens the dialog.
+
+### AlertDialog.Content
+
+The container for the dialog's content. It automatically renders `AlertDialog.Overlay`.
+
+### AlertDialog.Header
+
+Contains the title and description of the dialog.
+
+### AlertDialog.Title
+
+The title of the dialog.
+
+### AlertDialog.Description
+
+The description of the dialog.
+
+### AlertDialog.Footer
+
+Contains the action and cancel buttons.
+
+### AlertDialog.Action
+
+The button to confirm the action.
+
+### AlertDialog.Cancel
+
+The button to cancel the action.
+
+## Accessibility
+
+The `AlertDialog` component follows the [WAI-ARIA Alert Dialog Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/):
+
+- **Keyboard Support:** Supports standard keyboard interactions (`Enter`, `Space`, `Escape`).
+- **Focus Management:** Focus is automatically trapped within the dialog when open and restored to the trigger when closed.
+- **ARIA Attributes:** Automatically manages `aria-modal`, `aria-describedby`, and `aria-labelledby`.

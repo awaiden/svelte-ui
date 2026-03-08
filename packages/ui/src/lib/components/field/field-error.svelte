@@ -1,14 +1,13 @@
 <script lang="ts" module>
-import type { HTMLAttributes } from "svelte/elements";
+	import type { HTMLAttributes } from 'svelte/elements';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import type { FieldVariantType } from "./field.variants";
+	import type { FieldVariantType } from './field.variants';
 
-import { getFieldContext } from "./field-context";
+	import { getFieldContext } from './field-context';
 
-export type FieldProps = FieldVariantType &
-	HTMLAttributes<HTMLParagraphElement>;
+	export type FieldProps = FieldVariantType & HTMLAttributes<HTMLParagraphElement>;
 </script>
 
 <script lang="ts">

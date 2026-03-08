@@ -1,12 +1,12 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv, type VariantProps } from 'tailwind-variants';
 
 export const tabsVariants = tv({
 	slots: {
-		content: "tabs__content",
-		list: "tabs__list",
-		root: "tabs",
-		trigger: "tabs__trigger",
-	},
+		content: 'tabs__content',
+		list: 'tabs__list',
+		root: 'tabs',
+		trigger: 'tabs__trigger'
+	}
 });
 
 export type TabsVariantType = VariantProps<typeof tabsVariants>;

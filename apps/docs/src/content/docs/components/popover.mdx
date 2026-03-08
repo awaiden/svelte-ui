@@ -1,0 +1,90 @@
+---
+title: Popover
+description: Displays rich content in a portal, triggered by a button.
+---
+
+import { Popover } from '@adn-ui/svelte';
+import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
+
+import PopoverExample from '../../../components/PopoverExample.svelte';
+
+The `Popover` component is used to display floating content that is anchored to a trigger element. It's often used for displaying more detailed information or forms. It is built on top of [Bits UI](https://bits-ui.com/docs/components/popover).
+
+## Usage
+
+Import the `Popover` components to create a popover.
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Popover, Button } from "@adn-ui/svelte";
+</script>
+
+<Popover.Root>
+  <Popover.Trigger>
+    <Button variant="outline">Open Popover</Button>
+  </Popover.Trigger>
+  <Popover.Content>
+    <p>This is the popover content.</p>
+  </Popover.Content>
+</Popover.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Basic Popover
+
+A popover containing a small form to adjust dimensions.
+
+<div class="not-prose mb-6 flex items-center justify-center rounded-lg border bg-surface p-12">
+	<PopoverExample client:load />
+</div>
+
+```svelte
+<Popover.Root>
+	<Popover.Trigger>
+		<Button variant="outline">Open Popover</Button>
+	</Popover.Trigger>
+	<Popover.Content>
+		<!-- Content goes here -->
+	</Popover.Content>
+</Popover.Root>
+```
+
+## API Reference
+
+### Popover.Root
+
+The root component that manages the popover state.
+
+| Prop           | Type                      | Default     | Description                                 |
+| :------------- | :------------------------ | :---------- | :------------------------------------------ |
+| `open`         | `boolean`                 | `false`     | The controlled open state of the popover.   |
+| `onOpenChange` | `(open: boolean) => void` | `undefined` | Callback fired when the open state changes. |
+
+### Popover.Trigger
+
+The element that opens the popover.
+
+### Popover.Content
+
+The container for the popover content.
+
+### Popover.Arrow
+
+An optional arrow component that points to the trigger.
+
+### Popover.Close
+
+A wrapper for elements that should close the popover when clicked.
+
+## Accessibility
+
+The `Popover` component adheres to accessibility standards:
+
+- **Keyboard Support:** Supports `Esc` to close.
+- **Focus Management:** Focus can be moved into the popover and is restored to the trigger upon closing.
+- **ARIA Attributes:** Manages `role="dialog"`, `aria-haspopup`, and `aria-expanded`.

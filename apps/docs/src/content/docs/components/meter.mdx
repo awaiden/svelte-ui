@@ -1,0 +1,57 @@
+---
+title: Meter
+description: A graphical display of a scalar measurement within a known range.
+---
+
+import { Label, Meter } from '@adn-ui/svelte';
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+The `Meter` component displays a scalar measurement within a specified range, such as battery level, storage usage, or password strength.
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Meter } from "@adn-ui/svelte";
+</script>
+
+<Meter value={75} max={100} />
+```
+  </TabItem>
+</Tabs>
+
+## Showcase
+
+<div class="not-prose mb-6 flex flex-col gap-6 rounded-lg border bg-surface p-6">
+	<div class="flex flex-col gap-2">
+		<Label>Low value (20%)</Label>
+		<Meter client:load value={20} />
+	</div>
+	<div class="flex flex-col gap-2">
+		<Label>Medium value (50%)</Label>
+		<Meter client:load value={50} />
+	</div>
+	<div class="flex flex-col gap-2">
+		<Label>High value (90%)</Label>
+		<Meter client:load value={90} />
+	</div>
+</div>
+
+## API Reference
+
+The `Meter` component is built on top of [Bits UI Meter](https://bits-ui.com/docs/components/meter).
+
+| Prop             | Type     | Default     | Description                               |
+| :--------------- | :------- | :---------- | :---------------------------------------- |
+| `value`          | `number` | `0`         | The current value of the measurement.     |
+| `min`            | `number` | `0`         | The minimum value in the range.           |
+| `max`            | `number` | `100`       | The maximum value in the range.           |
+| `indicatorClass` | `string` | `undefined` | Additional classes for the indicator bar. |
+| `class`          | `string` | `undefined` | Additional classes for the root element.  |
+
+## Accessibility
+
+- Follows the [ARIA meter pattern](https://www.w3.org/WAI/ARIA/apg/patterns/meter/).
+- Use labels to provide context for the measurement.

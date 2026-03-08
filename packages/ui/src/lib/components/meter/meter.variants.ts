@@ -1,9 +1,9 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { tv, type VariantProps } from 'tailwind-variants';
 
 export const meterVariants = tv({
-	base: "meter",
+	base: 'meter',
 	defaultVariants: {},
-	variants: {},
+	variants: {}
 });
 
 export type MeterVariantType = VariantProps<typeof meterVariants>;

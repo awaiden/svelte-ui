@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { HTMLAttributes } from "svelte/elements";
+	import type { HTMLAttributes } from 'svelte/elements';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getDropdownMenuContext } from "./dropdown-menu-context";
+	import { getDropdownMenuContext } from './dropdown-menu-context';
 
-export type DropdownMenuShortcutProps = HTMLAttributes<HTMLSpanElement>;
+	export type DropdownMenuShortcutProps = HTMLAttributes<HTMLSpanElement>;
 </script>
 
 <script lang="ts">

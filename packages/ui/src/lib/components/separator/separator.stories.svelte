@@ -1,16 +1,16 @@
 <script lang="ts" module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import Separator from "./separator.svelte";
+	import Separator from './separator.svelte';
 
-const { Story } = defineMeta({
-	component: Separator,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Separator",
-});
+	const { Story } = defineMeta({
+		component: Separator,
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Separator'
+	});
 </script>
 
 <Story name="Default">

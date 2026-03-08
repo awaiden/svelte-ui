@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Accordion } from "bits-ui";
+	import type { Accordion } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getAccordionContext } from "./accordion-context";
+	import { getAccordionContext } from './accordion-context';
 
-export type AccordionHeaderProps = Accordion.HeaderProps;
+	export type AccordionHeaderProps = Accordion.HeaderProps;
 </script>
 
 <script lang="ts">

@@ -1,0 +1,47 @@
+---
+title: Switch
+description: A control that allows the user to toggle between checked and unchecked states.
+---
+
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+import SwitchExample from '../../../components/SwitchExample.svelte';
+
+The `Switch` component is a themed toggle used to switch between two states—typically `on` and `off`.
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Switch } from "@adn-ui/svelte";
+  let checked = $state(false);
+</script>
+
+<Switch.Root bind:checked />
+```
+  </TabItem>
+</Tabs>
+
+## Showcase
+
+<div class="not-prose mb-6 rounded-lg border bg-surface p-6">
+	<SwitchExample client:load />
+</div>
+
+## API Reference
+
+Built on top of [Bits UI Switch](https://bits-ui.com/docs/components/switch).
+
+| Prop       | Type      | Default | Description                                         |
+| :--------- | :-------- | :------ | :-------------------------------------------------- |
+| `checked`  | `boolean` | `false` | The controlled checked state of the switch.         |
+| `disabled` | `boolean` | `false` | Whether the switch is interactive.                  |
+| `required` | `boolean` | `false` | Whether the switch is required for form submission. |
+
+## Accessibility
+
+- Follows the [ARIA switch pattern](https://www.w3.org/WAI/ARIA/apg/patterns/switch/).
+- Supports keyboard interactions (`Space`, `Enter`).
+- Ensure the switch has an associated `Label`.

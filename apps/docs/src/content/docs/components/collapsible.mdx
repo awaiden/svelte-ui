@@ -1,0 +1,64 @@
+---
+title: Collapsible
+description: An interactive component which expands/collapses a panel.
+---
+
+import { Collapsible } from '@adn-ui/svelte';
+import { TabItem, Tabs } from '@astrojs/starlight/components';
+
+import CollapsibleExample from '../../../components/CollapsibleExample.svelte';
+
+The `Collapsible` component allows users to show or hide a content area. It is built on top of [Bits UI](https://bits-ui.com/docs/components/collapsible).
+
+## Usage
+
+<Tabs>
+  <TabItem label="Svelte">
+```svelte
+<script>
+  import { Collapsible, Button } from "@adn-ui/svelte";
+</script>
+
+<Collapsible.Root>
+  <Collapsible.Trigger>Can I use this?</Collapsible.Trigger>
+  <Collapsible.Content>
+    Yes, you can!
+  </Collapsible.Content>
+</Collapsible.Root>
+```
+  </TabItem>
+</Tabs>
+
+## Examples
+
+### Basic
+
+<div class="not-prose mb-6 flex justify-center rounded-lg border bg-surface p-6">
+	<CollapsibleExample client:load />
+</div>
+
+## API Reference
+
+### Collapsible.Root
+
+The container for the collapsible elements.
+
+| Prop       | Type      | Default | Description                                   |
+| :--------- | :-------- | :------ | :-------------------------------------------- |
+| `open`     | `boolean` | `false` | The controlled open state of the collapsible. |
+| `disabled` | `boolean` | `false` | Whether the collapsible is disabled.          |
+
+### Collapsible.Trigger
+
+The button that toggles the open/closed state.
+
+### Collapsible.Content
+
+The container for the collapsible content.
+
+## Accessibility
+
+The `Collapsible` component follows standard accessibility patterns:
+
+- **Keyboard Support:** Supports `Enter` and `Space` to toggle the visibility.
+- **ARIA Attributes:** Automatically manages `aria-expanded` and `aria-controls`.

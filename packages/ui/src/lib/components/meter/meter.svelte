@@ -1,14 +1,14 @@
 <script lang="ts" module>
-import type { Meter } from "bits-ui";
+	import type { Meter } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { meterVariants, type MeterVariantType } from "./meter.variants";
+	import { meterVariants, type MeterVariantType } from './meter.variants';
 
-export type MeterProps = {
-	indicatorClass?: string;
-} & Meter.RootProps &
-	MeterVariantType;
+	export type MeterProps = {
+		indicatorClass?: string;
+	} & Meter.RootProps &
+		MeterVariantType;
 </script>
 
 <script lang="ts">

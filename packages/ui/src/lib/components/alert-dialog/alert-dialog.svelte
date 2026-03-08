@@ -1,14 +1,10 @@
 <script lang="ts" module>
-import type { AlertDialog } from "bits-ui";
+	import type { AlertDialog } from 'bits-ui';
 
-import { setAlertDialogContext } from "./alert-dialog-context";
-import {
-	alertDialogVariants,
-	type AlertDialogVariantType,
-} from "./alert-dialog.variants";
+	import { setAlertDialogContext } from './alert-dialog-context';
+	import { alertDialogVariants, type AlertDialogVariantType } from './alert-dialog.variants';
 
-export type AlertDialogRootProps = AlertDialog.RootProps &
-	AlertDialogVariantType;
+	export type AlertDialogRootProps = AlertDialog.RootProps & AlertDialogVariantType;
 </script>
 
 <script lang="ts">

@@ -1,11 +1,5 @@
-import {
-	existsSync,
-	mkdirSync,
-	readdirSync,
-	readFileSync,
-	writeFileSync,
-} from "node:fs";
-import { join, resolve } from "node:path";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 
 function toCamel(str: string): string {
 	const pascal = toPascal(str);
@@ -15,30 +9,30 @@ function toCamel(str: string): string {
 // ── Helpers ──────────────────────────────────────────────────────────
 function toKebab(str: string): string {
 	return str
-		.replace(/([a-z])([A-Z])/g, "$1-$2")
-		.replace(/[\s_]+/g, "-")
+		.replace(/([a-z])([A-Z])/g, '$1-$2')
+		.replace(/[\s_]+/g, '-')
 		.toLowerCase();
 }
 
 function toPascal(str: string): string {
 	return str
-		.split("-")
+		.split('-')
 		.map((s) => s.charAt(0).toUpperCase() + s.slice(1))
-		.join("");
+		.join('');
 }
 
 // ── Resolve paths ────────────────────────────────────────────────────
-const ROOT = resolve(import.meta.dirname, "..");
-const TEMPLATES_DIR = join(ROOT, "scripts", "templates");
-const COMPONENTS_DIR = join(ROOT, "src", "lib", "components");
-const COMPONENTS_INDEX = join(COMPONENTS_DIR, "index.ts");
-const COMPONENTS_CSS = join(COMPONENTS_DIR, "components.css");
+const ROOT = resolve(import.meta.dirname, '..');
+const TEMPLATES_DIR = join(ROOT, 'scripts', 'templates');
+const COMPONENTS_DIR = join(ROOT, 'src', 'lib', 'components');
+const COMPONENTS_INDEX = join(COMPONENTS_DIR, 'index.ts');
+const COMPONENTS_CSS = join(COMPONENTS_DIR, 'components.css');
 
 // ── Parse CLI arg ────────────────────────────────────────────────────
 const raw = process.argv[2];
 
 if (!raw) {
-	console.error("Usage: bun add:component <component-name>");
+	console.error('Usage: bun add:component <component-name>');
 	process.exit(1);
 }
 
@@ -56,57 +50,55 @@ if (existsSync(componentDir)) {
 // ── Template rendering ───────────────────────────────────────────────
 function render(template: string): string {
 	return template
-		.replaceAll("{{name}}", name)
-		.replaceAll("{{PascalName}}", PascalName)
-		.replaceAll("{{camelName}}", camelName);
+		.replaceAll('{{name}}', name)
+		.replaceAll('{{PascalName}}', PascalName)
+		.replaceAll('{{camelName}}', camelName);
 }
 
 // Map template file names to output file names
 const FILE_MAP: Record<string, string> = {
-	"component.css.tpl": `${name}.css`,
-	"component.stories.svelte.tpl": `${name}.stories.svelte`,
-	"component.svelte.tpl": `${name}.svelte`,
-	"component.variants.ts.tpl": `${name}.variants.ts`,
-	"index.ts.tpl": "index.ts",
+	'component.css.tpl': `${name}.css`,
+	'component.stories.svelte.tpl': `${name}.stories.svelte`,
+	'component.svelte.tpl': `${name}.svelte`,
+	'component.variants.ts.tpl': `${name}.variants.ts`,
+	'index.ts.tpl': 'index.ts'
 };
 
 // ── Scaffold ─────────────────────────────────────────────────────────
 mkdirSync(componentDir, { recursive: true });
 
-const templateFiles = readdirSync(TEMPLATES_DIR).filter((f) =>
-	f.endsWith(".tpl"),
-);
+const templateFiles = readdirSync(TEMPLATES_DIR).filter((f) => f.endsWith('.tpl'));
 
 for (const tplFile of templateFiles) {
 	const outFile = FILE_MAP[tplFile];
 	if (!outFile) continue;
 
-	const tplContent = readFileSync(join(TEMPLATES_DIR, tplFile), "utf-8");
+	const tplContent = readFileSync(join(TEMPLATES_DIR, tplFile), 'utf-8');
 	writeFileSync(join(componentDir, outFile), render(tplContent));
 	console.log(`  ✓ ${name}/${outFile}`);
 }
 
 // ── Register in components/index.ts ──────────────────────────────────
 const exportLine = `export * from "./${name}";`;
-const indexContent = readFileSync(COMPONENTS_INDEX, "utf-8");
+const indexContent = readFileSync(COMPONENTS_INDEX, 'utf-8');
 
 if (!indexContent.includes(exportLine)) {
-	const lines = indexContent.trimEnd().split("\n");
+	const lines = indexContent.trimEnd().split('\n');
 	lines.push(exportLine);
 	lines.sort((a, b) => a.localeCompare(b));
-	writeFileSync(COMPONENTS_INDEX, lines.join("\n") + "\n");
+	writeFileSync(COMPONENTS_INDEX, lines.join('\n') + '\n');
 	console.log(`  ✓ Registered in components/index.ts`);
 }
 
 // ── Register in components.css ───────────────────────────────────────
 const cssImport = `@import "./${name}/${name}.css";`;
-const cssContent = readFileSync(COMPONENTS_CSS, "utf-8");
+const cssContent = readFileSync(COMPONENTS_CSS, 'utf-8');
 
 if (!cssContent.includes(cssImport)) {
-	const cssLines = cssContent.trimEnd().split("\n");
+	const cssLines = cssContent.trimEnd().split('\n');
 	cssLines.push(cssImport);
 	cssLines.sort((a, b) => a.localeCompare(b));
-	writeFileSync(COMPONENTS_CSS, cssLines.join("\n") + "\n");
+	writeFileSync(COMPONENTS_CSS, cssLines.join('\n') + '\n');
 	console.log(`  ✓ Registered in components.css`);
 }
 

@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { HTMLAttributes } from "svelte/elements";
+	import type { HTMLAttributes } from 'svelte/elements';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getAlertDialogContext } from "./alert-dialog-context";
+	import { getAlertDialogContext } from './alert-dialog-context';
 
-export type AlertDialogFooterProps = HTMLAttributes<HTMLDivElement>;
+	export type AlertDialogFooterProps = HTMLAttributes<HTMLDivElement>;
 </script>
 
 <script lang="ts">

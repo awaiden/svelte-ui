@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { HTMLAttributes } from "svelte/elements";
+	import type { HTMLAttributes } from 'svelte/elements';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getContextMenuContext } from "./context-menu-context";
+	import { getContextMenuContext } from './context-menu-context';
 
-export type ContextMenuShortcutProps = HTMLAttributes<HTMLSpanElement>;
+	export type ContextMenuShortcutProps = HTMLAttributes<HTMLSpanElement>;
 </script>
 
 <script lang="ts">

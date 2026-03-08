@@ -1,17 +1,17 @@
 <script module>
-import { defineMeta } from "@storybook/addon-svelte-csf";
+	import { defineMeta } from '@storybook/addon-svelte-csf';
 
-import { Checkbox } from ".";
-import { Label } from "../label";
+	import { Checkbox } from '.';
+	import { Label } from '../label';
 
-const { Story } = defineMeta({
-	component: Checkbox,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
-	title: "Checkbox",
-});
+	const { Story } = defineMeta({
+		component: Checkbox,
+		parameters: {
+			layout: 'centered'
+		},
+		tags: ['autodocs'],
+		title: 'Checkbox'
+	});
 </script>
 
 <Story name="Default">

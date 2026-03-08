@@ -1,14 +1,10 @@
 <script lang="ts" module>
-import type { ContextMenu } from "bits-ui";
+	import type { ContextMenu } from 'bits-ui';
 
-import { setContextMenuContext } from "./context-menu-context";
-import {
-	contextMenuVariants,
-	type ContextMenuVariantType,
-} from "./context-menu.variants";
+	import { setContextMenuContext } from './context-menu-context';
+	import { contextMenuVariants, type ContextMenuVariantType } from './context-menu.variants';
 
-export type ContextMenuRootProps = ContextMenu.RootProps &
-	ContextMenuVariantType;
+	export type ContextMenuRootProps = ContextMenu.RootProps & ContextMenuVariantType;
 </script>
 
 <script lang="ts">

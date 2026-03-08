@@ -1,6 +1,6 @@
-import { createContext } from "svelte";
+import { createContext } from 'svelte';
 
-import type { fieldVariants } from "./field.variants";
+import type { fieldVariants } from './field.variants';
 
 interface FieldContext {
 	id: string;

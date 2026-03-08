@@ -1,0 +1,66 @@
+---
+title: Installation
+description: Learn how to install and configure Svelte UI in your project.
+---
+
+import { Aside, Steps, TabItem, Tabs } from '@astrojs/starlight/components';
+
+Svelte UI is designed to work seamlessly with Svelte 5. This guide will walk you through the process of setting up the library in your project.
+
+## Prerequisites
+
+Before you begin, ensure you have a Svelte 5 project set up. If you're starting from scratch, you can create a new Svelte 5 project using:
+
+```bash
+bun x sv create
+# or
+npx sv create
+```
+
+## Installation
+
+<Steps>
+
+1.  ### Install the Package
+
+    Add `@adn-ui/svelte` and its peer dependencies to your project:
+
+    <Tabs>
+    	<TabItem label="Bun">
+    		```bash bun add @adn-ui/svelte lucide-svelte tailwind-variants tailwind-merge ```
+    	</TabItem>
+    	<TabItem label="npm">
+    		```bash npm install @adn-ui/svelte lucide-svelte tailwind-variants tailwind-merge ```
+    	</TabItem>
+    	<TabItem label="pnpm">
+    		```bash pnpm add @adn-ui/svelte lucide-svelte tailwind-variants tailwind-merge ```
+    	</TabItem>
+    </Tabs>
+
+2.  ### Configure Tailwind CSS 4
+
+    Svelte UI is built with Tailwind CSS 4. Ensure your project is configured correctly. Import the library's base styles in your main CSS file:
+
+    ```css
+    /* app.css or global.css */
+    @import 'tailwindcss';
+    @import '@adn-ui/svelte/styles';
+    ```
+
+3.  ### Usage
+
+    You're ready to start using components!
+
+    ```svelte
+    <script>
+    	import { Button } from '@adn-ui/svelte';
+    </script>
+
+    <Button variant="primary">Hello Svelte 5!</Button>
+    ```
+
+</Steps>
+
+## Next Steps
+
+Now that you've installed the library, check out the [Components](/components/button/) documentation to see what's available.

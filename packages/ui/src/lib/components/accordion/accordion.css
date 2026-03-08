@@ -1,13 +1,13 @@
 .accordion {
-	@apply w-full max-w-md;
+	@apply w-full min-w-0;
 }
 
 .accordion__item {
-	@apply border-b;
+	@apply w-full min-w-0;
 }
 
 .accordion__header {
-	@apply flex;
+	@apply flex w-full;
 }
 
 .accordion__trigger {
@@ -35,7 +35,7 @@
 }
 
 .accordion__content {
-	@apply overflow-hidden text-sm;
+	@apply w-full min-w-0 overflow-hidden text-sm;
 
 	&[data-state='open'] {
 		@apply animate-accordion-down;

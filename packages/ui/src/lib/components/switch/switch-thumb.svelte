@@ -1,11 +1,11 @@
 <script lang="ts" module>
-import type { Switch } from "bits-ui";
+	import type { Switch } from 'bits-ui';
 
-import { cn } from "tailwind-variants";
+	import { cn } from 'tailwind-variants';
 
-import { getSwitchContext } from "./switch-context";
+	import { getSwitchContext } from './switch-context';
 
-export type SwitchThumbProps = Switch.ThumbProps;
+	export type SwitchThumbProps = Switch.ThumbProps;
 </script>
 
 <script lang="ts">
